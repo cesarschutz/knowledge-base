@@ -1,41 +1,59 @@
-# Website
+# 📚 Base de Conhecimento - Cesar Schutz
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Esta é minha base de conhecimento pessoal, construída com [Docusaurus](https://docusaurus.io/), onde documento meus aprendizados, descobertas e insights sobre tecnologia e desenvolvimento.
 
-## Installation
+## 🚀 Sobre o Projeto
 
-```bash
-yarn
-```
+Este site serve como um repositório organizado dos meus conhecimentos em:
 
-## Local Development
+- **Desenvolvimento de Software** 💻
+- **Tecnologias e Ferramentas** 🛠️
+- **Boas Práticas** ✨
+- **Projetos Pessoais** 🚀
+- **Resolução de Problemas** 🔧
 
-```bash
-yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
+## 🛠️ Instalação
 
 ```bash
-yarn build
+npm install
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
+## 🔧 Desenvolvimento Local
 
 ```bash
-USE_SSH=true yarn deploy
+npm start
 ```
 
-Not using SSH:
+Este comando inicia um servidor de desenvolvimento local e abre uma janela do navegador. A maioria das mudanças são refletidas ao vivo sem precisar reiniciar o servidor.
+
+O site estará disponível em: http://localhost:3000
+
+## 📦 Build
 
 ```bash
-GIT_USER=<Your GitHub username> yarn deploy
+npm run build
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Este comando gera conteúdo estático no diretório `build` e pode ser servido usando qualquer serviço de hospedagem de conteúdo estático.
+
+## 🚀 Deploy
+
+Para GitHub Pages usando SSH:
+
+```bash
+USE_SSH=true npm run deploy
+```
+
+Sem SSH:
+
+```bash
+GIT_USER=cesarschutz npm run deploy
+```
+
+## 📝 Contribuindo
+
+Esta é uma base de conhecimento pessoal, mas se você encontrar algum erro ou tiver sugestões, fique à vontade para abrir uma issue!
+
+## 📄 Licença
+
+Este projeto é pessoal e serve como documentação dos meus aprendizados.

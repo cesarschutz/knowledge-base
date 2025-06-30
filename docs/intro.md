@@ -2,46 +2,36 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Bem-vindo à Minha Base de Conhecimento! 👋
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Olá! Este é meu espaço pessoal para **documentar e compartilhar conhecimentos** adquiridos durante minha jornada profissional e pessoal em tecnologia.
 
-## Getting Started
+## Sobre Esta Base de Conhecimento
 
-Get started by **creating a new site**.
+Este site foi criado para servir como um **repositório organizado** dos meus aprendizados, descobertas e insights sobre:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+- **Desenvolvimento de Software** 💻
+- **Tecnologias e Ferramentas** 🛠️
+- **Boas Práticas** ✨
+- **Projetos Pessoais** 🚀
+- **Resolução de Problemas** 🔧
 
-### What you'll need
+## Como Navegar
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### 📚 Documentação
+Na seção de documentação você encontrará tutoriais, guias e conceitos organizados por categorias. Use o menu lateral para navegar pelos tópicos.
 
-## Generate a new site
+### 📝 Blog
+No blog compartilho reflexões, experiências e atualizações sobre projetos em andamento.
 
-Generate a new Docusaurus site using the **classic template**.
+### 🔗 Links Úteis
+- **GitHub**: [cesarschutz](https://github.com/cesarschutz)
+- **Repositório desta base**: [knowledge-base](https://github.com/cesarschutz/knowledge-base)
 
-The classic template will automatically be added to your project after you run the command:
+## Contribuições
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+Esta é uma base de conhecimento pessoal, mas se você encontrar algum erro ou tiver sugestões, fique à vontade para abrir uma issue no GitHub!
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+---
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+*Esta base de conhecimento está em constante evolução. Volte sempre para ver novos conteúdos!* 🌱
