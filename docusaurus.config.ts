@@ -46,20 +46,7 @@ const config: Config = {
           editUrl:
             'https://github.com/cesarschutz/knowledge-base/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Link para editar posts do blog no GitHub
-          editUrl:
-            'https://github.com/cesarschutz/knowledge-base/tree/main/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -83,7 +70,6 @@ const config: Config = {
           position: 'left',
           label: 'Documentação',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/cesarschutz/knowledge-base',
           label: 'GitHub',
@@ -112,17 +98,13 @@ const config: Config = {
             },
             {
               label: 'LinkedIn',
-              href: 'https://linkedin.com/in/cesarschutz',
+              href: 'https://www.linkedin.com/in/cesar-schutz-10341a21/',
             },
           ],
         },
         {
           title: 'Conteúdo',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
             {
               label: 'Repositório',
               href: 'https://github.com/cesarschutz/knowledge-base',

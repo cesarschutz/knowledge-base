@@ -28,3 +28,8 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Deixar a foto do header redonda */
+.navbar__logo img {
+  border-radius: 50%;
+}

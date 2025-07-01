@@ -21,9 +21,6 @@ Este site foi criado para servir como um **repositório organizado** dos meus ap
 ### 📚 Documentação
 Na seção de documentação você encontrará tutoriais, guias e conceitos organizados por categorias. Use o menu lateral para navegar pelos tópicos.
 
-### 📝 Blog
-No blog compartilho reflexões, experiências e atualizações sobre projetos em andamento.
-
 ### 🔗 Links Úteis
 - **GitHub**: [cesarschutz](https://github.com/cesarschutz)
 - **Repositório desta base**: [knowledge-base](https://github.com/cesarschutz/knowledge-base)
