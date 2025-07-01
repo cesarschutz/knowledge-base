@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Cesar Schutz - Base de Conhecimento',
   tagline: 'Documentando minha jornada de aprendizado em tecnologia',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -73,8 +73,8 @@ const config: Config = {
     navbar: {
       title: 'Cesar Schutz',
       logo: {
-        alt: 'Cesar Schutz Logo',
-        src: 'img/logo.svg',
+        alt: 'Cesar Schutz',
+        src: 'img/cesar-avatar.png',
       },
       items: [
         {
