@@ -34,6 +34,12 @@ const config: Config = {
   i18n: {
     defaultLocale: 'pt-BR',
     locales: ['pt-BR'],
+    localeConfigs: {
+      'pt-BR': {
+        htmlLang: 'pt-BR',
+        direction: 'ltr',
+      },
+    },
   },
 
   presets: [
@@ -57,6 +63,12 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    metadata: [
+      {name: 'language', content: 'pt-BR'},
+      {name: 'keywords', content: 'Java, programação, tecnologia, desenvolvimento, português'},
+      {name: 'author', content: 'Cesar Schutz'},
+      {property: 'og:locale', content: 'pt_BR'},
+    ],
     navbar: {
       title: 'Cesar Schutz',
       logo: {
