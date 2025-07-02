@@ -39,16 +39,104 @@ Versões com **suporte estendido** para uso empresarial e produção.
 
 #### 📊 Características:
 - **Frequência**: A cada **3 anos** (Java 8, 11, 17, 21, 25...)
-- **Suporte**: **8+ anos** de atualizações de segurança
+- **Duração**: **8+ anos** de atualizações de segurança
 - **Estabilidade**: Testadas extensivamente
 - **Recomendação**: **Preferidas para produção**
 
-#### 💼 Fornecedores de Suporte:
-- **Oracle**: Suporte comercial
-- **Red Hat**: OpenJDK builds
-- **Amazon**: Corretto
-- **Microsoft**: OpenJDK builds
-- **Eclipse**: Adoptium/Temurin
+#### 💰 **Como Funciona o Suporte?**
+
+##### 🆓 **Suporte GRATUITO (OpenJDK)**
+- **Fornecido por**: Comunidade OpenJDK
+- **Duração**: 
+  - **6 meses** para feature releases (Java 22, 23, 24...)
+  - **3 anos** para LTS no OpenJDK oficial
+- **Inclui**: Correções de segurança e bugs críticos
+- **Limitações**: Suporte limitado, sem SLA, comunidade
+
+##### 💼 **Suporte COMERCIAL (Pago)**
+- **Fornecedores**: Oracle, Red Hat, Amazon, Microsoft, etc.
+- **Duração**: **8+ anos** (muito além do OpenJDK)
+- **Inclui**: 
+  - ✅ Correções de segurança estendidas
+  - ✅ Suporte técnico 24/7
+  - ✅ SLA garantido
+  - ✅ Hotfixes personalizados
+  - ✅ Consultoria de migração
+- **Preço**: Varia por fornecedor (geralmente por core/usuário)
+
+#### 🏢 **Fornecedores e Opções**
+
+##### 🆓 **Gratuitas**
+- **Eclipse Temurin** (ex-AdoptOpenJDK) - Recomendado
+- **Amazon Corretto** - Suporte estendido gratuito
+- **Microsoft OpenJDK** - Para Azure principalmente
+- **OpenJDK oficial** - Suporte limitado
+
+##### 💰 **Comerciais**
+- **Oracle Java SE Subscription** - $$$
+- **Red Hat OpenJDK Support** - Incluso no RHEL
+- **IBM Semeru Runtime** - Suporte empresarial
+- **Azul Platform Core** - Suporte premium
+
+#### 🤔 **Qual Escolher?**
+
+##### 🏠 **Para Uso Pessoal/Estudos**
+- **Recomendado**: **Eclipse Temurin** (gratuito)
+- **Alternativa**: **Amazon Corretto** (gratuito)
+- **Motivo**: Sem custos, atualizações regulares
+
+##### 🏢 **Para Pequenas Empresas**
+- **Recomendado**: **Amazon Corretto** ou **Eclipse Temurin**
+- **Quando pagar**: Se precisar de suporte técnico garantido
+- **Custo**: Avalie ROI vs necessidade
+
+##### 🏗️ **Para Grandes Empresas**
+- **Recomendado**: **Suporte comercial** 
+- **Motivos**: 
+  - Compliance e auditoria
+  - SLA garantido
+  - Suporte para aplicações críticas
+  - Migração assistida
+
+##### 💡 **Exemplo Prático**
+```
+Startup → Eclipse Temurin (gratuito)
+Empresa média → Amazon Corretto (gratuito) + consultoria externa se necessário
+Banco/Hospital → Oracle/Red Hat (pago) para aplicações críticas
+```
+
+#### 📊 **Comparação Rápida**
+
+| Aspecto | OpenJDK Gratuito | Suporte Comercial |
+|---------|------------------|-------------------|
+| **💰 Custo** | Gratuito | Pago ($$-$$$) |
+| **🕐 Suporte LTS** | 3 anos | 8+ anos |
+| **🆘 Suporte Técnico** | Comunidade | 24/7 com SLA |
+| **🔒 Patches Segurança** | Públicos | Privados + rápidos |
+| **⚖️ Responsabilidade** | Sua | Fornecedor |
+| **🎯 Para Quem** | Desenvolvimento, pequenas empresas | Empresas críticas |
+
+#### ⚠️ **Confusão Comum: Oracle JDK vs OpenJDK**
+
+##### 🆓 **OpenJDK** (Código Aberto)
+- **Licença**: GPL com Classpath Exception (gratuito)
+- **Desenvolvido por**: Oracle + Comunidade
+- **Funcionalidades**: Idêntico ao Oracle JDK (desde Java 11)
+- **Suporte**: Comunidade (limitado)
+
+##### 💼 **Oracle JDK** (Comercial)
+- **Licença**: Oracle Technology Network License
+- **Desenvolvido por**: Oracle
+- **Funcionalidades**: Idêntico ao OpenJDK + ferramentas comerciais
+- **Suporte**: Oracle (pago)
+- **Uso**: **REQUER LICENÇA** para produção
+
+##### 🔍 **Resumo**
+- **OpenJDK**: Gratuito, código aberto, mesmo código base
+- **Oracle JDK**: Pago, licença comercial, suporte oficial
+- **Na prática**: Use OpenJDK (Temurin/Corretto) para evitar custos
+
+---
 
 ### 📦 **Feature Releases**
 
