@@ -3,6 +3,6 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Documentação sobre atualizações e lançamentos do Java por versão."
+    "description": "O Java segue um ciclo de lançamentos de 6 meses desde 2017, com versões LTS (Long Term Support) a cada 3 anos. As versões LTS (Java 8, 11, 17, 21, 25) são recomendadas para produção com 8+ anos de suporte, enquanto Feature Releases trazem inovações a cada 6 meses. Esta seção documenta as principais novidades de cada versão com exemplos práticos."
   }
 } 
