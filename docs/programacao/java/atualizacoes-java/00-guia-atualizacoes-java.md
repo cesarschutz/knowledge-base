@@ -19,7 +19,7 @@
 ### 🔧 **Migração**
 7. [🔄 Estratégias de Migração](#-estratégias-de-migração)
 8. [📊 Matrix de Compatibilidade](#-matrix-de-compatibilidade)
-9. [🛠️ Processo de Migração em 5 Fases](#-processo-de-migração-em-5-fases)
+9. [🛠️ Processo de Migração em 5 Fases](#processo-de-migração-em-5-fases)
 10. [⚡ Ferramentas de Migração](#-ferramentas-de-migração)
 
 ### 🚀 **Aspectos Avançados**

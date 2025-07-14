@@ -1,59 +1,51 @@
-# 📚 Base de Conhecimento - Cesar Schutz
+# Cesar Schutz - Base de Conhecimento
 
-Esta é minha base de conhecimento pessoal, construída com [Docusaurus](https://docusaurus.io/), onde documento meus aprendizados, descobertas e insights sobre tecnologia e desenvolvimento.
+Este é meu espaço pessoal para **documentar e compartilhar conhecimentos** adquiridos durante minha jornada profissional e pessoal em tecnologia.
 
-## 🚀 Sobre o Projeto
+## 🌐 Site
 
-Este site serve como um repositório organizado dos meus conhecimentos em:
+O site está disponível em: **https://cesarschutz.github.io/knowledge-base/**
 
-- **Desenvolvimento de Software** 💻
-- **Tecnologias e Ferramentas** 🛠️
-- **Boas Práticas** ✨
-- **Projetos Pessoais** 🚀
-- **Resolução de Problemas** 🔧
+## 📚 Conteúdo
 
-## 🛠️ Instalação
+Este repositório contém:
+
+- **MBA Full Cycle - Arquitetura de Software**: Documentação completa do curso
+- **Programação**: Guias e tutoriais sobre Java, Angular e outras tecnologias
+- **Atualizações Java**: Guia detalhado das principais mudanças entre versões do Java
+
+## 🚀 Tecnologias
+
+- [Docusaurus](https://docusaurus.io/) - Framework para documentação
+- [React](https://reactjs.org/) - Biblioteca JavaScript
+- [TypeScript](https://www.typescriptlang.org/) - Linguagem de programação
+
+## 🛠️ Desenvolvimento Local
+
+Para executar o projeto localmente:
 
 ```bash
+# Instalar dependências
 npm install
-```
 
-## 🔧 Desenvolvimento Local
-
-```bash
+# Iniciar servidor de desenvolvimento
 npm start
-```
 
-Este comando inicia um servidor de desenvolvimento local e abre uma janela do navegador. A maioria das mudanças são refletidas ao vivo sem precisar reiniciar o servidor.
-
-O site estará disponível em: http://localhost:3000
-
-## 📦 Build
-
-```bash
+# Build para produção
 npm run build
+
+# Servir build local
+npm run serve
 ```
 
-Este comando gera conteúdo estático no diretório `build` e pode ser servido usando qualquer serviço de hospedagem de conteúdo estático.
+## 📝 Contribuição
 
-## 🚀 Deploy
-
-Para GitHub Pages usando SSH:
-
-```bash
-USE_SSH=true npm run deploy
-```
-
-Sem SSH:
-
-```bash
-GIT_USER=cesarschutz npm run deploy
-```
-
-## 📝 Contribuindo
-
-Esta é uma base de conhecimento pessoal, mas se você encontrar algum erro ou tiver sugestões, fique à vontade para abrir uma issue!
+Este é um repositório pessoal, mas sinta-se à vontade para abrir issues ou pull requests se encontrar algum erro ou tiver sugestões de melhoria.
 
 ## 📄 Licença
 
-Este projeto é pessoal e serve como documentação dos meus aprendizados.
+Este projeto é de uso pessoal e educacional.
+
+---
+
+**Cesar Schutz** - [GitHub](https://github.com/cesarschutz) | [LinkedIn](https://www.linkedin.com/in/cesar-schutz-10341a21/)
