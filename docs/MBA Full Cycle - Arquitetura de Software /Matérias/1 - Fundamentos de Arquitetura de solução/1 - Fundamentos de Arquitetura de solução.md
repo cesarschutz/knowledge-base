@@ -9,12 +9,12 @@
 🌐 O curso também introduz o ecossistema **Cloud Native** através da CNCF e finaliza com a criação de documentos de arquitetura de solução (SAD), preparando os profissionais para atuar como arquitetos de soluções capazes de alinhar tecnologia com objetivos de negócio em ambientes complexos e distribuídos.
 
 
-# **📄 Informações Gerais** {#📄-informações-gerais}
+## **📄 Informações Gerais** {#📄-informações-gerais}
 
 **Conteúdo \-\>** [Link do conteúdo do módulo](https://plataforma.fullcycle.com.br/courses/1aff9d87-e2c0-4589-8fa1-561c318f1bc6/403/183/180/conteudos)  
 **Arquivos \-\>** [https://drive.google.com/drive/folders/160-9qZ9XgtEeKsrOZozKcrZmhzaxmRb7](https://drive.google.com/drive/folders/160-9qZ9XgtEeKsrOZozKcrZmhzaxmRb7) 
 
-# **📖 Leituras** {#📖-leituras}
+## **📖 Leituras** {#📖-leituras}
 
 - 📄 [The 4+1 View Model of Architecture (Drive)](https://drive.google.com/file/d/1Zrp7Fngq_rJ1LhnjCos4FujE0IcDyqOe/view)         
 - 🔗 [Microservices - Martin Fowler](https://martinfowler.com/articles/microservices.html)  
