@@ -1,0 +1,648 @@
+# 📊 Calculadora de Projeção de Capacidade
+
+import { useState } from 'react';
+
+export default function SystemDesignCalculator() {
+  const [dau, setDau] = useState(1000000);
+  const [requestsPerUser, setRequestsPerUser] = useState(1);
+  const [requestSize, setRequestSize] = useState(20); // KB
+  const [writeRatio, setWriteRatio] = useState(0.1); // 10%
+  const [replication, setReplication] = useState(3);
+  
+  // Opção de configuração apenas para segundos
+  const [useRoundedSeconds, setUseRoundedSeconds] = useState(true); // 100.000 vs 86.400
+
+  // Cálculos dinâmicos baseados na configuração do usuário
+  const secondsPerDay = useRoundedSeconds ? 100000 : 86400; // 10^5 ou valor real
+  const conversionFactor = 1000; // Sempre base 1000 para storage
+  
+  const requestsPerDay = dau * requestsPerUser;
+  const rps = requestsPerDay / secondsPerDay;
+  
+  // Largura de banda: RPS * tamanho por request
+  const bandwidthKBs = rps * requestSize; // KB/s
+  const bandwidthMBs = bandwidthKBs / conversionFactor; // MB/s
+  
+  // Storage: apenas requests de escrita
+  const writeRequestsKBs = bandwidthKBs * writeRatio; // KB/s de escrita
+  const totalWriteKBs = writeRequestsKBs * replication; // KB/s com replicação
+  
+  // Storage por dia: KB/s * segundos por dia / 1000 / 1000 para GB
+  const storageMBs = totalWriteKBs / conversionFactor; // MB/s
+  const storagePerDayMB = storageMBs * secondsPerDay; // MB por dia
+  const storagePerDayGB = storagePerDayMB / conversionFactor; // GB por dia
+  
+  // Storage por ano e 5 anos
+  const storagePerYearGB = storagePerDayGB * 365;
+  const storagePerYearTB = storagePerYearGB / conversionFactor; // TB
+  const storage5YearsTB = storagePerYearTB * 5;
+
+  const containerStyle = {
+    maxWidth: '700px',
+    margin: '2rem auto',
+    padding: '0 0.5rem',
+    fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+    lineHeight: '1.5',
+    color: '#1a202c'
+  };
+
+  const headerStyle = {
+    background: 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #ec4899 100%)',
+    color: 'white',
+    padding: '1.5rem 1rem',
+    borderRadius: '12px 12px 0 0',
+    textAlign: 'center',
+    boxShadow: '0 4px 16px rgba(79, 70, 229, 0.12)',
+    position: 'relative',
+    overflow: 'hidden'
+  };
+
+  const headerOverlayStyle = {
+    display: 'none'
+  };
+
+  const titleStyle = {
+    fontSize: '2rem',
+    fontWeight: '700',
+    margin: '0',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '0.5rem',
+    letterSpacing: '-0.01em',
+    position: 'relative',
+    zIndex: 1
+  };
+
+  const subtitleStyle = {
+    fontSize: '1rem',
+    opacity: '0.95',
+    margin: '0.5rem 0 0 0',
+    fontWeight: '400',
+    letterSpacing: '0.01em',
+    position: 'relative',
+    zIndex: 1
+  };
+
+  const contentStyle = {
+    background: '#ffffff',
+    borderRadius: '0 0 12px 12px',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.07)',
+    overflow: 'hidden',
+    border: '1px solid #e2e8f0'
+  };
+
+  const sectionStyle = {
+    padding: '1.2rem'
+  };
+
+  const sectionTitleStyle = {
+    fontSize: '1.2rem',
+    fontWeight: '600',
+    color: '#2d3748',
+    margin: '0 0 1.2rem 0',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.5rem',
+    borderBottom: '2px solid #e2e8f0',
+    paddingBottom: '0.5rem',
+    letterSpacing: '-0.01em'
+  };
+
+  const gridStyle = {
+    display: 'grid',
+    gridTemplateColumns: '1fr',
+    gap: '1rem'
+  };
+
+  const inputGroupStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '0.5rem'
+  };
+
+  const labelStyle = {
+    fontSize: '1rem',
+    fontWeight: '500',
+    color: '#374151',
+    letterSpacing: '0.005em',
+    lineHeight: '1.3'
+  };
+
+  const inputStyle = {
+    padding: '0.7rem 1rem',
+    border: '1px solid #e5e7eb',
+    borderRadius: '8px',
+    fontSize: '1rem',
+    transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
+    backgroundColor: '#f9fafb',
+    fontWeight: '500',
+    color: '#1f2937',
+    boxShadow: 'none',
+    outline: 'none'
+  };
+
+  const inputFocusStyle = {
+    borderColor: '#4f46e5',
+    backgroundColor: '#ffffff',
+    boxShadow: '0 0 0 2px rgba(79, 70, 229, 0.08)',
+    transform: 'none'
+  };
+
+  const configSectionStyle = {
+    background: '#f8fafc',
+    borderRadius: '10px',
+    padding: '1rem',
+    margin: '1.2rem 0',
+    border: '1px solid #e2e8f0',
+    boxShadow: 'none'
+  };
+
+  const configTitleStyle = {
+    fontSize: '1.05rem',
+    fontWeight: '600',
+    color: '#374151',
+    margin: '0 0 1rem 0',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.5rem',
+    letterSpacing: '-0.01em'
+  };
+
+  const checkboxItemStyle = {
+    display: 'flex',
+    alignItems: 'flex-start',
+    gap: '0.7rem',
+    padding: '0.7rem',
+    backgroundColor: '#ffffff',
+    borderRadius: '8px',
+    border: '1px solid #e5e7eb',
+    boxShadow: 'none',
+    cursor: 'pointer',
+    maxWidth: '100%'
+  };
+
+  const checkboxItemHoverStyle = {
+    borderColor: '#4f46e5',
+    boxShadow: '0 2px 8px rgba(79, 70, 229, 0.07)',
+    transform: 'none'
+  };
+
+  const checkboxStyle = {
+    width: '16px',
+    height: '16px',
+    marginTop: '2px',
+    accentColor: '#4f46e5',
+    cursor: 'pointer'
+  };
+
+  const checkboxLabelStyle = {
+    fontSize: '0.95rem',
+    lineHeight: '1.4',
+    color: '#374151',
+    cursor: 'pointer'
+  };
+
+  const tableContainerStyle = {
+    background: '#ffffff',
+    borderRadius: '14px',
+    overflow: 'hidden',
+    border: '1px solid #e2e8f0',
+    boxShadow: '0 2px 8px rgba(79,70,229,0.07)',
+    padding: '1.2rem',
+    display: 'flex',
+    justifyContent: 'center',
+  };
+
+  const tableStyle = {
+    width: 'auto',
+    maxWidth: '420px',
+    borderCollapse: 'collapse',
+    fontSize: '0.98rem'
+  };
+
+  // Adicione estilos para zebra e centralização
+  const tableRowStyle = {
+    borderBottom: '1px solid #f1f5f9',
+    transition: 'background-color 0.2s ease',
+  };
+  const tableRowAltStyle = {
+    ...tableRowStyle,
+    backgroundColor: '#f8fafc',
+  };
+
+  const tableRowHoverStyle = {
+    backgroundColor: '#f8fafc'
+  };
+
+  const tableCellStyle = {
+    padding: '0.7rem 1rem',
+    textAlign: 'left'
+  };
+
+  const tableCellBoldStyle = {
+    ...tableCellStyle,
+    fontWeight: '500',
+    color: '#1f2937',
+    backgroundColor: '#ffffff',
+    fontSize: '1rem',
+    letterSpacing: '0.005em'
+  };
+
+  const tableCellValueStyle = {
+    ...tableCellStyle,
+    fontWeight: '600',
+    color: '#6366f1',
+    backgroundColor: '#ffffff',
+    textAlign: 'center',
+    fontFamily: '"JetBrains Mono", Monaco, Consolas, "Courier New", monospace',
+    fontSize: '1.05rem',
+    letterSpacing: '0.01em',
+  };
+
+  const calculationSectionStyle = {
+    background: '#eff6ff',
+    borderRadius: '10px',
+    padding: '1rem',
+    margin: '1.2rem 0',
+    border: '1px solid #bfdbfe',
+    boxShadow: 'none'
+  };
+
+  const calculationTitleStyle = {
+    fontSize: '1.1rem',
+    fontWeight: '600',
+    color: '#1e40af',
+    margin: '0 0 1rem 0',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.5rem',
+    letterSpacing: '-0.01em'
+  };
+
+  const formulaStyle = {
+    background: '#ffffff',
+    border: '1px solid #bfdbfe',
+    borderRadius: '8px',
+    padding: '0.7rem',
+    margin: '0.5rem 0',
+    fontFamily: '"JetBrains Mono", Monaco, Consolas, "Courier New", monospace',
+    fontSize: '0.95rem',
+    lineHeight: '1.5',
+    color: '#1f2937',
+    boxShadow: 'none'
+  };
+
+  const noteStyle = {
+    background: '#fef3c7',
+    border: '1px solid #f59e0b',
+    borderRadius: '10px',
+    padding: '1rem',
+    marginTop: '1.2rem',
+    position: 'relative',
+    boxShadow: 'none'
+  };
+
+  const noteIconStyle = {
+    position: 'absolute',
+    top: '1rem',
+    left: '1rem',
+    fontSize: '1.2rem'
+  };
+
+  const noteContentStyle = {
+    marginLeft: '2.2rem',
+    fontSize: '0.95rem',
+    lineHeight: '1.5',
+    color: '#92400e',
+    fontWeight: '500'
+  };
+
+  const detailsStyle = {
+    marginTop: '1.2rem',
+    border: '1px solid #e5e7eb',
+    borderRadius: '8px',
+    overflow: 'hidden',
+    boxShadow: 'none'
+  };
+
+  const summaryStyle = {
+    padding: '0.7rem 1rem',
+    backgroundColor: '#f9fafb',
+    cursor: 'pointer',
+    fontWeight: '500',
+    color: '#374151',
+    borderBottom: '1px solid #e5e7eb',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.5rem',
+    fontSize: '1rem',
+    transition: 'background-color 0.2s ease',
+    letterSpacing: '0.005em'
+  };
+
+  const summaryHoverStyle = {
+    backgroundColor: '#f3f4f6'
+  };
+
+  const formulaListStyle = {
+    padding: '1rem',
+    margin: '0',
+    backgroundColor: '#ffffff'
+  };
+
+  const formulaItemStyle = {
+    marginBottom: '0.7rem',
+    fontSize: '0.95rem',
+    lineHeight: '1.5',
+    padding: '0.7rem',
+    backgroundColor: '#f8fafc',
+    borderRadius: '8px',
+    border: '1px solid #e2e8f0',
+    boxShadow: 'none'
+  };
+
+  return (
+    <div style={containerStyle}>
+      <div style={headerStyle}>
+        <div style={headerOverlayStyle}></div>
+        <h1 style={titleStyle}>
+          📊 Calculadora de Projeção de Capacidade
+        </h1>
+        <p style={subtitleStyle}>
+          Ferramenta profissional para estimativa de recursos de sistema e capacity planning
+        </p>
+      </div>
+      
+      <div style={contentStyle}>
+        <section style={sectionStyle}>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            background: '#f8fafc',
+            border: '1px solid #e2e8f0',
+            borderRadius: '8px',
+            boxShadow: '0 2px 8px rgba(79,70,229,0.06)',
+            padding: '0.7rem 1rem',
+            margin: '0 0 1.2rem 0',
+            gap: '0.7rem',
+            minHeight: '40px',
+          }}>
+            <span style={{ fontSize: '1.15rem', color: '#6366f1', marginRight: '0.2rem' }}>⚙️</span>
+            <input 
+              type="checkbox" 
+              id="roundedSeconds"
+              checked={useRoundedSeconds}
+              onChange={e => setUseRoundedSeconds(e.target.checked)}
+              style={{ marginRight: '0.5rem', accentColor: '#4f46e5', width: '18px', height: '18px' }}
+            />
+            <label htmlFor="roundedSeconds" style={{ fontSize: '1rem', color: '#374151', fontWeight: 500, cursor: 'pointer', lineHeight: 1.4 }}>
+              <span style={{ fontWeight: 600, color: '#4f46e5' }}>Modo arredondado:</span> Usar <b>100.000 segundos/dia</b> 
+            </label>
+          </div>
+          <h2 style={sectionTitleStyle}>
+            ⚙️ Parâmetros de Entrada
+          </h2>
+          <div style={gridStyle}>
+            <div style={inputGroupStyle}>
+              <label style={labelStyle}>
+                Usuários Ativos Diários (DAU)
+              </label>
+              <input 
+                type="number" 
+                value={dau} 
+                min={1} 
+                onChange={e => setDau(Number(e.target.value))} 
+                style={inputStyle}
+                onFocus={e => Object.assign(e.target.style, inputFocusStyle)}
+                onBlur={e => Object.assign(e.target.style, inputStyle)}
+              />
+            </div>
+            
+            <div style={inputGroupStyle}>
+              <label style={labelStyle}>
+                Requests por usuário (por dia)
+              </label>
+              <input 
+                type="number" 
+                value={requestsPerUser} 
+                min={1} 
+                onChange={e => setRequestsPerUser(Number(e.target.value))} 
+                style={inputStyle}
+                onFocus={e => Object.assign(e.target.style, inputFocusStyle)}
+                onBlur={e => Object.assign(e.target.style, inputStyle)}
+              />
+            </div>
+            
+            <div style={inputGroupStyle}>
+              <label style={labelStyle}>
+                Tamanho médio por request (KB)
+              </label>
+              <input 
+                type="number" 
+                value={requestSize} 
+                min={1} 
+                onChange={e => setRequestSize(Number(e.target.value))} 
+                style={inputStyle}
+                onFocus={e => Object.assign(e.target.style, inputFocusStyle)}
+                onBlur={e => Object.assign(e.target.style, inputStyle)}
+              />
+            </div>
+            
+            <div style={inputGroupStyle}>
+              <label style={labelStyle}>
+                Proporção de escrita (ex: 0.1 para 10%)
+              </label>
+              <input 
+                type="number" 
+                step="0.01" 
+                value={writeRatio} 
+                min={0} 
+                max={1} 
+                onChange={e => setWriteRatio(Number(e.target.value))} 
+                style={inputStyle}
+                onFocus={e => Object.assign(e.target.style, inputFocusStyle)}
+                onBlur={e => Object.assign(e.target.style, inputStyle)}
+              />
+            </div>
+            
+            <div style={inputGroupStyle}>
+              <label style={labelStyle}>
+                Fator de replicação
+              </label>
+              <input 
+                type="number" 
+                value={replication} 
+                min={1} 
+                onChange={e => setReplication(Number(e.target.value))} 
+                style={inputStyle}
+                onFocus={e => Object.assign(e.target.style, inputFocusStyle)}
+                onBlur={e => Object.assign(e.target.style, inputStyle)}
+              />
+            </div>
+          </div>
+        </section>
+
+        <section style={{...sectionStyle, borderTop: '1px solid #e5e7eb', backgroundColor: '#fafbfc'}}>
+          <h2 style={sectionTitleStyle}>
+            📈 Resultados Calculados
+          </h2>
+          <div style={tableContainerStyle}>
+            <table style={tableStyle}>
+              <tbody>
+                <tr 
+                  style={tableRowStyle}
+                  onMouseEnter={e => Object.assign(e.currentTarget.style, tableRowHoverStyle)}
+                  onMouseLeave={e => Object.assign(e.currentTarget.style, tableRowStyle)}
+                >
+                  <td style={tableCellBoldStyle}>🔄 Requests por dia</td>
+                  <td style={tableCellValueStyle}>{requestsPerDay.toLocaleString()}</td>
+                </tr>
+                <tr 
+                  style={tableRowAltStyle}
+                  onMouseEnter={e => Object.assign(e.currentTarget.style, tableRowHoverStyle)}
+                  onMouseLeave={e => Object.assign(e.currentTarget.style, tableRowAltStyle)}
+                >
+                  <td style={tableCellBoldStyle}>⏱️ Requests por segundo (RPS)</td>
+                  <td style={tableCellValueStyle}>{rps.toFixed(2)}</td>
+                </tr>
+                <tr 
+                  style={tableRowStyle}
+                  onMouseEnter={e => Object.assign(e.currentTarget.style, tableRowHoverStyle)}
+                  onMouseLeave={e => Object.assign(e.currentTarget.style, tableRowStyle)}
+                >
+                  <td style={tableCellBoldStyle}>📡 Largura de banda necessária</td>
+                  <td style={tableCellValueStyle}>{bandwidthMBs.toFixed(2)} <span style={{ color: '#64748b', fontWeight: 400 }}>MB/s</span></td>
+                </tr>
+                <tr 
+                  style={tableRowAltStyle}
+                  onMouseEnter={e => Object.assign(e.currentTarget.style, tableRowHoverStyle)}
+                  onMouseLeave={e => Object.assign(e.currentTarget.style, tableRowAltStyle)}
+                >
+                  <td style={tableCellBoldStyle}>💾 Escrita por segundo (com replicação)</td>
+                  <td style={tableCellValueStyle}>{totalWriteKBs.toFixed(2)} <span style={{ color: '#64748b', fontWeight: 400 }}>KB/s</span></td>
+                </tr>
+                <tr 
+                  style={tableRowStyle}
+                  onMouseEnter={e => Object.assign(e.currentTarget.style, tableRowHoverStyle)}
+                  onMouseLeave={e => Object.assign(e.currentTarget.style, tableRowStyle)}
+                >
+                  <td style={tableCellBoldStyle}>🗄️ Storage por dia</td>
+                  <td style={tableCellValueStyle}>{storagePerDayGB.toFixed(2)} <span style={{ color: '#64748b', fontWeight: 400 }}>GB</span></td>
+                </tr>
+                <tr 
+                  style={tableRowAltStyle}
+                  onMouseEnter={e => Object.assign(e.currentTarget.style, tableRowHoverStyle)}
+                  onMouseLeave={e => Object.assign(e.currentTarget.style, tableRowAltStyle)}
+                >
+                  <td style={tableCellBoldStyle}>📅 Storage por ano</td>
+                  <td style={tableCellValueStyle}>{storagePerYearTB.toFixed(2)} <span style={{ color: '#64748b', fontWeight: 400 }}>TB</span></td>
+                </tr>
+                <tr 
+                  style={{...tableRowStyle, borderBottom: 'none'}}
+                  onMouseEnter={e => Object.assign(e.currentTarget.style, tableRowHoverStyle)}
+                  onMouseLeave={e => Object.assign(e.currentTarget.style, {...tableRowStyle, borderBottom: 'none'})}
+                >
+                  <td style={tableCellBoldStyle}>⏳ Storage em 5 anos</td>
+                  <td style={tableCellValueStyle}>{storage5YearsTB.toFixed(2)} <span style={{ color: '#64748b', fontWeight: 400 }}>TB</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style={calculationSectionStyle}>
+            <h3 style={calculationTitleStyle}>
+              🧮 Demonstração dos Cálculos
+            </h3>
+            
+            <div style={formulaStyle}>
+              <strong>🚀 Performance (RPS):</strong><br/>
+              DAU × Requests por usuário = Requests por dia<br/>
+              {dau.toLocaleString()} × {requestsPerUser} = {requestsPerDay.toLocaleString()} requests/dia<br/><br/>
+              
+              Requests por dia ÷ Segundos por dia = RPS<br/>
+              {requestsPerDay.toLocaleString()} ÷ {secondsPerDay.toLocaleString()} = {rps.toFixed(2)} RPS<br/>
+              <em>({useRoundedSeconds ? 'Usando arredondamento' : 'Usando valor real'}: {secondsPerDay.toLocaleString()} segundos/dia)</em>
+            </div>
+
+            <div style={formulaStyle}>
+              <strong>🌐 Largura de Banda:</strong><br/>
+              RPS × Tamanho por request = Largura de banda<br/>
+              {rps.toFixed(2)} × {requestSize} KB = {bandwidthKBs.toFixed(2)} KB/s<br/>
+              {bandwidthKBs.toFixed(2)} KB/s ÷ 1000 = {bandwidthMBs.toFixed(2)} MB/s
+            </div>
+
+            <div style={formulaStyle}>
+              <strong>💾 Armazenamento:</strong><br/>
+              Largura de banda × Proporção de escrita = Escrita por segundo<br/>
+              {bandwidthKBs.toFixed(2)} KB/s × {(writeRatio * 100).toFixed(0)}% = {writeRequestsKBs.toFixed(2)} KB/s<br/><br/>
+              
+              Escrita por segundo × Fator de replicação = Storage total<br/>
+              {writeRequestsKBs.toFixed(2)} KB/s × {replication} réplicas = {totalWriteKBs.toFixed(2)} KB/s<br/><br/>
+              
+              Storage por segundo × Segundos por dia ÷ 1000² = Storage por dia<br/>
+              {(totalWriteKBs/1000).toFixed(4)} MB/s × {secondsPerDay.toLocaleString()} = {storagePerDayMB.toFixed(2)} MB/dia<br/>
+              {storagePerDayMB.toFixed(2)} MB ÷ 1000 = {storagePerDayGB.toFixed(2)} GB/dia<br/><br/>
+              
+              Storage por dia × 365 = Storage por ano<br/>
+              {storagePerDayGB.toFixed(2)} GB × 365 = {storagePerYearGB.toFixed(2)} GB ÷ 1000 = {storagePerYearTB.toFixed(2)} TB/ano
+            </div>
+          </div>
+
+          <div style={noteStyle}>
+            <div style={noteIconStyle}>💡</div>
+            <div style={noteContentStyle}>
+              <strong>Configuração atual:</strong><br/>
+              • <strong>Segundos por dia:</strong> {useRoundedSeconds ? '100.000 (arredondado para facilitar cálculos)' : '86.400 (valor real)'}<br/>
+              • <strong>Conversões de storage:</strong> Base 1000 (padrão da indústria para armazenamento)<br/>
+              • {useRoundedSeconds ? 'Arredondamento fornece estimativas conservadoras com margem de segurança' : 'Valores reais fornecem cálculos precisos'}<br/>
+              • Para sistemas críticos, considere fatores adicionais como picos de tráfego e crescimento
+            </div>
+          </div>
+
+          <details style={detailsStyle}>
+            <summary 
+              style={summaryStyle}
+              onMouseEnter={e => Object.assign(e.currentTarget.style, summaryHoverStyle)}
+              onMouseLeave={e => Object.assign(e.currentTarget.style, summaryStyle)}
+            >
+              🔍 Fórmulas Detalhadas e Padrões Utilizados
+            </summary>
+            <div style={formulaListStyle}>
+              <div style={formulaItemStyle}>
+                <strong>Requests por dia:</strong> DAU × Requests por usuário<br/>
+                <em>Calcula o volume total de requisições diárias</em>
+              </div>
+              <div style={formulaItemStyle}>
+                <strong>RPS (Requests per Second):</strong> Requests por dia ÷ Segundos por dia<br/>
+                <em>Converte volume diário para taxa por segundo</em><br/>
+                • <strong>Arredondado:</strong> 100.000 segundos (10⁵) - facilita cálculos e adiciona margem<br/>
+                • <strong>Real:</strong> 86.400 segundos - valor exato
+              </div>
+              <div style={formulaItemStyle}>
+                <strong>Largura de banda:</strong> RPS × Tamanho médio por request ÷ 1000<br/>
+                <em>Calcula throughput de rede necessário (KB/s → MB/s)</em>
+              </div>
+              <div style={formulaItemStyle}>
+                <strong>Escrita por segundo:</strong> Largura de banda × Proporção de escrita × Fator de replicação<br/>
+                <em>Considera apenas operações de escrita multiplicadas pelas réplicas</em>
+              </div>
+              <div style={formulaItemStyle}>
+                <strong>Storage por dia:</strong> (Escrita por segundo ÷ 1000) × Segundos por dia ÷ 1000<br/>
+                <em>Converte KB/s → MB/s → MB/dia → GB/dia</em>
+              </div>
+              <div style={formulaItemStyle}>
+                <strong>Conversões de storage (base 1000):</strong><br/>
+                • 1 MB = 1.000 KB<br/>
+                • 1 GB = 1.000 MB<br/>
+                • 1 TB = 1.000 GB<br/>
+                <em>Padrão da indústria para armazenamento (HDs, SSDs, cloud storage)</em>
+              </div>
+            </div>
+          </details>
+        </section>
+      </div>
+    </div>
+  );
+}
+
