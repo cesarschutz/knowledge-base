@@ -11,23 +11,18 @@
 🧠 **Raciocínio como KPI** – Performance analítica, clareza de pensamento e habilidade de decompor problemas são métricas-chave nesse contexto.
 
 🏗️ **Outcome do módulo** – Entregar base conceitual robusta que habilite:
-
-:::info
-
 * Compreensão dos fundamentos de System Design.  
 * Consolidação de repertório para escolhas arquiteturais assertivas.  
 * Upskilling visando readiness para entrevistas de alto nível.  
-📈 **Roadmap de evolução** – Gradualmente ampliar visão, entender modelos de cálculo, custos e premissas que antecedem o blueprint final da aplicação.  
-🚀 **Call to action** – Internalizar práticas tradicionais, exercitar pensamento sistêmico e preparar-se para entregar arquitetura de missão crítica sem surpresas.
 
-:::
+📈 **Roadmap de evolução** – Gradualmente ampliar visão, entender modelos de cálculo, custos e premissas que antecedem o blueprint final da aplicação.  
+
+🚀 **Call to action** – Internalizar práticas tradicionais, exercitar pensamento sistêmico e preparar-se para entregar arquitetura de missão crítica sem surpresas.
 
 ## 🧩 **Entendendo os principais conceitos**
 
-:::caution Disclaimer
-
+:::caution
 ⚠️ **Disclaimer inicial** – Esta etapa do curso será **altamente prática**. A abordagem será mão na massa, com foco em execução, mas também haverá breves retornos a conceitos teóricos sempre que necessário para fixação.
-
 :::
 
 📚 **Base conceitual rápida** – Alguns slides serão usados para alinhar conceitos, mas o foco principal será a aplicação prática do conteúdo.
@@ -43,12 +38,10 @@
 * Modelagem de dados.  
 * Aplicação prática do processo completo.
 
-:::info Definição
-
+:::info
 🔍 **Definição objetiva** –  
 System Design é o processo de **definição da arquitetura, componentes, módulos, interfaces e dados** necessários para atender aos requisitos de um sistema.  
 👉 Ou seja: **é o processo para definir a arquitetura**. Ponto.
-
 :::
 
 📉 **Erro comum no mercado** –  
@@ -85,7 +78,6 @@ System Design é sobre **pensar processos**, **simular soluções** e **tomar de
 📌 **Resumo do vídeo anterior** – Já introduzimos a ideia central do System Design e vamos aprofundar progressivamente com conceitos e prática ao longo do módulo.
 
 :::note
-
 🧠 **Parêntese importante** –  
 Big Techs utilizam System Design em seus processos seletivos. Mas por quê?
 
@@ -95,7 +87,6 @@ Big Techs utilizam System Design em seus processos seletivos. Mas por quê?
 * Entender seu **repertório técnico** diante de soluções propostas.  
 * Medir sua **capacidade de aprofundar** tecnicamente em temas citados.  
 * Verificar **como você deduz e aproxima números**, e qual é a lógica por trás da sua abordagem.
-
 :::
 
 ⚠️ **Realidade prática** –  
@@ -119,8 +110,7 @@ A maioria não conhece os principais passos e técnicas, acaba rabiscando soluç
 * Métodos para raciocinar sob pressão.  
 * Como **pensar melhor e deduzir com lógica**.
 
-:::tip Comunicação é chave
-
+:::tip
 🗣️ **Capacidade de comunicação** –  
 System Design é um teste de **comunicação estratégica**, não só de arquitetura.  
 Você será avaliado por:
@@ -132,7 +122,6 @@ Você será avaliado por:
 🧩 **Comunicar é perguntar bem** –  
 Saber perguntar é parte da arte do System Design.  
 Fazer boas perguntas é mais importante do que dar respostas precipitadas.
-
 :::
 
 🧪 **Pressão e reação** –  
@@ -158,8 +147,7 @@ Se você é arquiteto de soluções, **essa ferramenta é indispensável**.
 Empresas como Google, Microsoft e outras grandes corporações **adotam técnicas e etapas** específicas de System Design.  
 Cada uma com sua abordagem, mas com um ponto em comum: **estrutura e lógica no raciocínio arquitetural**.
 
-:::info A linguagem do Arquiteto
-
+:::info
 🧰 **Ferramenta de expressão do arquiteto** –  
 System Design é **a linguagem do arquiteto de soluções**.  
 Diante da complexidade de um sistema, expressar-se de forma organizada é vital para garantir entendimento.  
@@ -171,15 +159,12 @@ Formalizar suas ideias com System Design dá a você:
 * Tempo para refletir com mais profundidade.  
 * Clareza para justificar decisões.  
 * Convicção técnica ao apresentar uma solução.
-
 :::
 
-:::tip Analogia com TDD
-
+:::tip
 🔁 **Analogia com TDD (Test Driven Development)** –  
 Assim como escrever o teste antes do código te força a pensar melhor,  
 **estruturar o System Design antes da implementação aumenta a qualidade da solução**.
-
 :::
 
 💼 **System Design também vende** –  
@@ -202,7 +187,7 @@ Ele envolve:
 * Avaliação de trade-offs.
 
 💬 **Justificativas importam** –  
-Exemplo: “Vamos usar Apache Kafka.”
+Exemplo: "Vamos usar Apache Kafka."
 
 * Por quê?  
 * Quais vantagens?  
@@ -224,8 +209,7 @@ Definitivamente **não**.
 Desenhar é apenas **uma etapa** do processo.  
 System Design envolve **muito mais técnica e raciocínio estruturado**.
 
-:::info Os 6 Elementos Fundamentais
-
+:::info
 🧩 **O que compõe um bom System Design?**  
 Wesley destaca **seis elementos fundamentais** para se fazer System Design com qualidade:
 
@@ -277,11 +261,9 @@ Finalmente, **é hora de desenhar**:
 * Componentes  
 * Cloud providers  
   O desenho é **parte do System Design**, não o System Design inteiro.
-
 :::
 
-:::caution Ponto de Atenção
-
+:::caution
 6️⃣ **Exploração e justificativa**  
 Essa é a **etapa mais negligenciada**.
 
@@ -291,7 +273,6 @@ Essa é a **etapa mais negligenciada**.
   Você precisa **conseguir defender cada escolha com argumentos técnicos**.  
   Aqui entra o verdadeiro valor do arquiteto:  
   **sair do piloto automático e justificar com propriedade.**
-
 :::
 
 📌 **Reflexão final** –  
@@ -306,7 +287,7 @@ O System Design te força a sair disso e pensar:
 Desenvolver um pensamento **intencional, estruturado e justificado**.  
 System Design é a ferramenta para isso.
 
-🚀 Vamos nessa\!
+🚀 Vamos nessa!
 
 ## 📋 **Requisitos**
 
@@ -315,8 +296,7 @@ Antes de tudo, é preciso **entender o problema e o propósito do sistema**.
 Sem requisitos, não há norte. Não se trata de voltar ao modelo waterfall,  
 mas sim de **ter clareza do domínio e das funcionalidades que importam**.
 
-:::note Foco no Domínio e Funcionalidades
-
+:::note
 🔍 **O que são os Requisitos no System Design?**
 
 🎯 **Core Features e Domínio da Aplicação**
@@ -345,11 +325,9 @@ São funcionalidades **auxiliares que sustentam as principais**.
 
 * **Core Features** → Razão de existir do sistema.  
 * **Support Features** → Funcionalidades auxiliares que tornam as principais viáveis.
-
 :::
 
-:::info Funcionais vs. Não Funcionais
-
+:::info
 ⚖️ **Requisitos Funcionais vs Não Funcionais**
 
 📌 **Funcionais** – O que o sistema faz.  
@@ -360,7 +338,6 @@ São funcionalidades **auxiliares que sustentam as principais**.
 * Escalabilidade  
 * Latência  
 * Tolerância a falhas
-
 :::
 
 ## ⚖️ **Requisitos não funcionais e teorema CAP**
@@ -387,21 +364,16 @@ Garantia de que os dados estejam corretos, principalmente em situações de conc
 ⚠️ **Conflito entre requisitos: é possível ter tudo ao mesmo tempo?**  
 💡 Não. Aqui entra o **Teorema CAP**.
 
-:::caution Teorema CAP
-
+:::caution
 📚 **Teorema CAP** – Você só pode escolher **dois dos três** pilares abaixo:
 
 1. **Consistência** (C) – Todos os nós veem os mesmos dados ao mesmo tempo.  
 2. **Disponibilidade** (A) – O sistema responde sempre, mesmo em falhas.  
 3. **Tolerância à Partição** (P) – O sistema continua operando mesmo se houver falha de comunicação entre nós.
-
-![][image1]![][image2]
-
 :::
 
-:::note Exemplos Práticos
-
-🔄 Exemplo prático:
+:::note
+🔄 **Exemplo prático:**
 
 🏧 **Caixa eletrônico**  
 Dois usuários tentando sacar o mesmo saldo ao mesmo tempo.  
@@ -417,10 +389,7 @@ Se houver conflito (mesmo quarto reservado duas vezes), uma **resolução poster
 * Saldo e extrato podem vir de bancos diferentes.  
 * Você vê o saldo atualizado antes de ver a transação no extrato.  
 * **Disponibilidade é garantida, consistência é eventual.**
-
 :::
-
-:::tip Dica de Arquitetura
 
 🤝 **Decisões técnicas x decisões de negócio**  
 Esses trade-offs **não são puramente técnicos**.  
@@ -432,10 +401,6 @@ A escolha entre consistência e disponibilidade depende de **regras de negócio*
 * Explicar as implicações.  
 * Perguntar: “O que você prefere neste cenário específico?”
 
-:::
-
-:::info Resumo dos Atributos
-
 📌 **Resumo dos principais atributos para nosso sistema de ingressos**:
 
 * ⚡ **Baixa latência** – Experiência fluida ao comprar ou consultar ingressos.  
@@ -444,8 +409,6 @@ A escolha entre consistência e disponibilidade depende de **regras de negócio*
 * ✅ **Consistência dos dados** – Crítica para **não vender o mesmo ingresso para duas pessoas**.
 
 🚨 Mas: **consistência e disponibilidade totais são mutuamente excludentes em redes distribuídas**. A consistência pode ser **eventual** dependendo da decisão de negócio.
-
-:::
 
 ## 📊 **Dados importantes**
 
@@ -456,12 +419,11 @@ Essa é uma etapa **fundamental** do System Design, pois permite dimensionar cor
 
 * **Infraestrutura**  
 * **Banda**  
-* **Throughput** \- ou simplesmente taxa de transferência é a quantidade de dados transferidos de um lugar a outro, ou a quantidade de dados processados em um determinado espaço de tempo.  
+* **Throughput** - ou simplesmente taxa de transferência é a quantidade de dados transferidos de um lugar a outro, ou a quantidade de dados processados em um determinado espaço de tempo.  
 * **Escalabilidade**  
 * **Tipos de banco de dados e tecnologias**
 
-:::note Premissas para o Plano de Capacidade
-
+:::note
 📌 **Dados importantes para dimensionamento**
 
 👥 **DAU (Daily Active Users)**
@@ -486,8 +448,8 @@ Essa é uma etapa **fundamental** do System Design, pois permite dimensionar cor
 
 🔄 **Proporção de leitura vs escrita (READS vs WRITES)**
 
-**write \- sistema de log**  
-**read \- netflix**
+**write - sistema de log**  
+**read - netflix**
 
 * Estimativa: **9:1**  
 * A cada 10 requests:  
@@ -509,7 +471,7 @@ Essa é uma etapa **fundamental** do System Design, pois permite dimensionar cor
 * Gateway de pagamento adequado  
 * Design da API e otimizações de banda
 
-⚠️ **Não esquecer dos picos de acesso\!**
+⚠️ **Não esquecer dos picos de acesso!**
 
 * Eventos especiais (ex: shows do Sandy & Júnior) causam explosões de tráfego.  
 * O sistema deve ser projetado para **resistir a esse estresse**, mesmo que de forma elástica e temporária.
@@ -522,7 +484,6 @@ Essa é uma etapa **fundamental** do System Design, pois permite dimensionar cor
 - [x] Taxa de conversão  
 - [x] Leitura vs escrita  
 - [x] Picos de acesso
-
 :::
 
 🎯 **Conclusão**  
@@ -545,9 +506,8 @@ Aqui vamos calcular:
 🎯 **Importante**: essa etapa é **decisiva em entrevistas e no mundo real**.  
 Sem entender essas métricas, **todo o restante do System Design perde base sólida**.
 
-:::tip Dica Prática
-
-💬 **Dica prática**: pergunte tudo\!  
+:::tip
+💬 **Dica prática**: pergunte tudo!  
 Não sabe quantos acessos terão? Pergunte.  
 Não sabe a taxa de conversão? Pergunte.  
 Evite fazer suposições vazias.
@@ -556,11 +516,9 @@ Evite fazer suposições vazias.
 Em contextos de pressão (ex: entrevista), a tentativa de fazer contas com precisão pode te travar.  
 Você perde tempo, erra conta e compromete seu raciocínio.  
 Solução? **Use técnicas de aproximação.**
-
 :::
 
-:::info Notação Científica
-
+:::info
 📊 **Usando Notação Científica no System Design**
 
 ✏️ **Por que usar?**  
@@ -569,24 +527,24 @@ A notação científica simplifica, agiliza e reduz erros.
 
 📚 **Exemplos de base**:
 
-* 1.000 \= 10³  
-* 10.000 \= 10⁴  
-* 100.000 \= 10⁵  
-* 1.000.000 \= 10⁶
+* 1.000 = 10³  
+* 10.000 = 10⁴  
+* 100.000 = 10⁵  
+* 1.000.000 = 10⁶
 
 📌 **Exemplos práticos**:
 
-* 7.000 \= 7 × 10³  
-* 95.000 \= 9.5 × 10⁴
+* 7.000 = 7 × 10³  
+* 95.000 = 9.5 × 10⁴
 
 🔢 **Operações básicas com notação científica**
 
 ✅ **Multiplicação**  
-Exemplo: 10⁵ × 10³ \= 10⁸  
+Exemplo: 10⁵ × 10³ = 10⁸  
 **Soma os expoentes**
 
 ✅ **Divisão**  
-Exemplo: 10⁵ ÷ 10³ \= 10²  
+Exemplo: 10⁵ ÷ 10³ = 10²  
 **Subtrai os expoentes**
 
 📏 **Conversões úteis**  
@@ -597,7 +555,6 @@ Essenciais para cálculo de tráfego, banda e armazenamento:
 * **Mega → Tera**: ÷ 10⁶
 
 ![][image3]
-
 :::
 
 🧾 **Resumo: o que aprendemos até aqui**
@@ -637,12 +594,12 @@ Vamos ao cálculo:
   ✅ Resultado: **50 requests por segundo**
 
 🧠 Muito mais fácil que dividir 5.000.000 / 86.400 na mão.  
-**Notação científica \= velocidade \+ clareza \+ menos erros**
+**Notação científica = velocidade + clareza + menos erros**
 
 🔁 **Dividindo por tipo de operação**
 
-* Writes \= 10% do total → `50 ÷ 10 = 5 RPS`  
-* Reads \= 90% → `50 - 5 = 45 RPS`
+* Writes = 10% do total → `50 ÷ 10 = 5 RPS`  
+* Reads = 90% → `50 - 5 = 45 RPS`
 
 📊 **Resumo prático**
 
@@ -651,11 +608,9 @@ Vamos ao cálculo:
 * 🔍 Reads por segundo: 45
 
 ![][image4]
-
 :::
 
-:::tip Benefícios da Técnica
-
+:::tip
 🎯 **Conclusão**
 
 Essa técnica te permite:
@@ -663,7 +618,6 @@ Essa técnica te permite:
 * Raciocinar rápido  
 * Evitar erros com zeros  
 * Justificar escolhas com números confiáveis mesmo sob pressão
-
 :::
 
 ## 🛒 **Compras por segundo**
@@ -699,15 +653,12 @@ Aplicando:
 * Total de compras por dia: **50.000**  
 * Compras por segundo: **0.5 CPS**
 
-**![][image5]**
-
+![][image5]
 :::
 
-:::info Conclusão
-
+:::info
 Essa taxa de transação é **relativamente baixa** em comparação com o volume geral de requests,  
 mas ela é **crítica** para o sucesso do negócio e **deve ser protegida com alta confiabilidade**.
-
 :::
 
 ## 📡 **Bandwidth**
@@ -735,8 +686,8 @@ Agora vamos calcular a **quantidade de dados trafegados por segundo** no sistema
 
 :::
 
-:::info Conclusão
 
+:::info
 🎯 **Conclusão** Esse valor representa o **volume médio de tráfego transacional** por segundo.  
 Atenção: esse cálculo **não considera picos**, CDN, headers ou payloads adicionais. É uma **base para planejamento**.  
 ![][image6]
@@ -746,7 +697,6 @@ Atenção: esse cálculo **não considera picos**, CDN, headers ou payloads adic
 * Quantidade de requests por segundo  
   ×  
 * Tamanho médio da resposta
-
 :::
 
 ## 💾 **Storage (pt1)**
@@ -812,11 +762,11 @@ Ou seja:
 
 :::
 
-:::tip Conclusão da Metodologia
+:::
 
+:::tip
 🎯 **Conclusão** Mesmo com aproximações, você consegue apresentar cálculos com clareza, justificativa e agilidade.  
 **É isso que importa em entrevistas e no dia a dia corporativo.**
-
 :::
 
 ## 💾 **Storage (pt2)**
@@ -884,12 +834,12 @@ Convertendo para Terabytes:
 
 :::
 
-:::tip Conclusão da Metodologia
+:::
 
+:::tip
 🔍 **Conclusão**
 
 Apesar de parecer trabalhoso no início, trabalhar com **notação científica e aproximações práticas** torna as contas viáveis, rápidas e confiáveis — especialmente em contextos de entrevista ou discussões técnicas de alto nível.
-
 :::
 
 ## 💡 **Considerações**
@@ -925,14 +875,13 @@ Todos os nossos cálculos dependem de dados funcionais e não funcionais:
 
 :::
 
-:::note Conclusão e Material de Apoio
 
+:::note
 📐 **Conclusão**
 
 O importante é ter uma base. Com poucos dados e os racionais certos, você já consegue **sair do zero** e montar um plano de capacidade confiável, defendendo suas decisões com clareza.
 
 📁 **Este material está disponível para consulta futura. Use como referência ou adapte conforme sua realidade.**
-
 :::
 
 ## 📝 **Exercicio**
