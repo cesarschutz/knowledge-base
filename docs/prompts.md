@@ -8,28 +8,40 @@ sidebar_position: 1
 <summary><strong>Converter transcrição de aula em markdown</strong></summary>
 
 ```markdown
-Você é um especialista em análise de conteúdo educacional. Sua tarefa é converter a transcrição de uma aula em um conteúdo em **Markdown**, estruturado, legível e fiel ao que foi dito.
+Você é um especialista em análise de conteúdo educacional. Sua tarefa é transformar a transcrição de uma aula em um conteúdo **estruturado em Markdown**, organizado, atrativo e fiel ao que foi falado.
 
-🔧 **INSTRUÇÕES**  
-1. Leia atentamente TODA a transcrição.  
-2. Extraia apenas os conceitos, exemplos e explicações que foram EFETIVAMENTE abordados.  
-3. NÃO adicione conteúdo extra, NÃO interprete, NÃO alucine.  
-4. Respeite integralmente a ordem lógica da explicação original.  
-5. Mantenha a fidelidade máxima ao discurso do professor.
+🎯 **OBJETIVO**  
+Converter a transcrição em um material didático em Markdown, utilizando **todos os recursos disponíveis** da linguagem para destacar e organizar o conteúdo da melhor forma possível.
 
-📦 **FORMATO DE SAÍDA**  
-- Gerar conteúdo em Markdown (sem títulos — **NÃO usar `#`**).  
-- Utilize **emojis** para destacar tópicos e facilitar a leitura.  
-- Estruture os pontos com marcadores e/ou recuos visuais.  
-- Seja conciso, mas cubra todos os pontos realmente explicados.  
-- Ao final, inclua sempre um resumo geral com `>` (blockquote).
+📌 **INSTRUÇÕES GERAIS**  
+1. Leia e compreenda **toda a transcrição** da aula.  
+2. Extraia **apenas os conceitos, explicações e exemplos efetivamente mencionados**.  
+3. **NÃO adicione, interprete ou invente nada.** Seja 100% fiel ao conteúdo original.  
+4. Respeite a **ordem e sequência lógica** da aula.
 
-🧾 **REGRAS FINAIS**  
-- Imprima o resultado como **bloco de código Markdown** para fácil cópia.  
-- Use recursos visuais do Markdown para tornar o material mais agradável.  
-- NÃO inclua nada que não tenha sido mencionado.  
-- NÃO tente corrigir, completar ou interpretar lacunas.  
-- Foco absoluto no que foi REALMENTE explicado.
+🛠️ **FORMATAÇÃO EM MARKDOWN**  
+Utilize de forma inteligente e variada os recursos abaixo, sempre com bom senso e estética:
+
+- ✅ Listas com bullets ou numeradas para sequências ou tópicos.
+- 🔠 **Negrito**, *itálico* e `monoespaçado` para destacar termos técnicos.
+- 🧱 Blocos de código quando houver trechos de programação.
+- 📊 **Tabelas** para comparações, classificações ou agrupamentos.
+- ➕ Emojis para facilitar a navegação visual e reforçar seções.
+- 📎 Itens com subníveis usando recuo e hierarquia visual.
+- 📢 **Blockquotes (`>`)** para resumos ou mensagens do professor.
+
+🧾 **SAÍDA FINAL**  
+- O conteúdo **não deve conter títulos** com `#`.  
+- Ao final do material, inclua um **resumo geral** em formato de blockquote (`>`).  
+- A saída deve ser impressa como **bloco de código Markdown completo** para facilitar a cópia.  
+- O texto deve ser **limpo, bem formatado, fiel e didaticamente útil**.
+
+🚫 **RESTRIÇÕES**  
+- Não inclua interpretações, suposições ou complementos.  
+- Não reordene os assuntos.  
+- Não preencha lacunas com achismos.  
+
+📌 **Respeite o conteúdo como ele foi dito. Foque apenas no que foi realmente explicado.**
 ```
 
 </details>
