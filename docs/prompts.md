@@ -10,35 +10,44 @@ sidebar_position: 1
 <summary><strong>🗣 Converter transcrição de aula em markdown</strong></summary>
 
 ```markdown
-tema_da_aula = [[COLOQUE AQUI O TEMA DA AULA]]
-transcricao_da_aula = [[COLE AQUI A TRANSCRIÇÃO COMPLETA DA AULA]]
+📚 **Crie um resumo visual e compacto desta transcrição**
 
-Você é um especialista no tema: **{{tema_da_aula}}**.  
-Use apenas esse tema como contexto.
+Analise a transcrição e produza um resumo **extremamente conciso** que capture apenas a essência do conteúdo.
 
-Seu objetivo: registrar **todos os tópicos abordados na aula**, de modo **compacto, completo e técnico**, mantendo a ordem e fidelidade ao texto.
+## 🎯 Objetivo:
+Criar um documento de **revisão rápida** com no máximo 34-60% do tamanho original.
 
-INSTRUÇÕES ESTRITAS:
-1. Atue como especialista em **{{tema_da_aula}}**.
-2. Não use títulos de nível maior (ex: `#`).
-3. Não use linhas horizontais (`---`).
-4. Para cada tópico, na ordem exata da transcrição, use **este formato exato**:
+## ✏️ Formatação:
 
-   [emoji] **Título do Tópico:**␣␣
+**Recursos visuais:**
+• Use **negrito** para conceitos-chave
+• *Itálico* para exemplos breves
+• Bullets (•) para listas compactas
+• Emojis estratégicos: 💡 (insights) 🔑 (conceitos centrais) ⚠️ (alertas)
+• Emojis que achar que combina com determinado assunto para deixar a leitura mais atraente
 
-     Explicação objetiva e fiel, baseada **única e exclusivamente** no conteúdo da aula.  
-    *(compacta; sem repetir exemplos ou linguagem redundante)*
+**Estrutura:**
+• **Introdução**: 2-3 linhas contextualizando o tema
+• **Pontos principais**: Apenas conceitos fundamentais, sem detalhamentos
+• **Conclusão**: 1-2 linhas sintetizando o aprendizado
 
-   - Dois espaços no final da linha do **título**, antes da quebra.
-   - Linha em branco entre título e explicação.
-   - Sem espaços extras em outras linhas.
+## 📏 Regras de Síntese:
+• Máximo 1 parágrafo por conceito principal
+• Elimine exemplos extensos - mencione apenas se essencial
+• Transforme explicações longas em frases diretas
+• Junte ideias relacionadas em um único ponto
 
-5. Inclua **todos os tópicos** abordados — não é um resumo, é uma versão enxugada, porém completa.
-6. **Não adicione conteúdo externo ou inferências** — só use `transcricao_da_aula`.
-7. Mantenha a **ordem original inteira da aula**.
-8. Use jargões e termos técnicos pertinentes ao tema.
-9. **Imprima toda a saída DENTRO de um bloco de código Markdown** (```) — para facilitar a cópia.
+## 🚫 Não use:
+• Títulos com #
+• Linhas divisórias ---
+• Repetições ou detalhes secundários
 
-<document>{{transcricao_da_aula}}</document>
+## 📦 Entrega:
+```markdown
+[Resumo ultra-conciso aqui]
+```
+
+**Transcrição:**
+[Cole aqui]
 ```
 </details>
