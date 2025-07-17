@@ -45,3 +45,44 @@ h2 {
 h3 {
   color: var(--ifm-color-primary-lighter);
 }
+
+/* Quebra de linha automática em blocos de código */
+pre {
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  max-width: 100%;
+}
+
+pre code {
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  max-width: 100%;
+  display: block;
+}
+
+/* Para blocos de código inline */
+code {
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Melhorar espaçamento em blocos de código longos */
+pre {
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  pre {
+    font-size: 0.85rem;
+    padding: 0.75rem;
+  }
+  
+  pre code {
+    font-size: 0.85rem;
+  }
+}
