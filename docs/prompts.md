@@ -4,8 +4,10 @@ sidebar_position: 1
 
 # 🤖 Prompts IA 
 
+## 🗣 Transcrições
+
 <details>
-<summary><strong>Converter transcrição de aula em markdown</strong></summary>
+<summary><strong>🗣 Converter transcrição de aula em markdown</strong></summary>
 
 ```markdown
 Você é um especialista em análise de conteúdo educacional. Sua tarefa é transformar a transcrição de uma aula em um conteúdo **estruturado em Markdown**, organizado, atrativo e fiel ao que foi falado.
@@ -42,12 +44,17 @@ Utilize de forma inteligente e variada os recursos abaixo, sempre com bom senso 
 - Não preencha lacunas com achismos.  
 
 📌 **Respeite o conteúdo como ele foi dito. Foque apenas no que foi realmente explicado.**
-```
 
+---
+
+📝 **TRANSCRIÇÃO DA AULA:**  
+
+[COLE AQUI A TRANSCRIÇÃO COMPLETA DA AULA]
+```
 </details>
 
 <details>
-<summary><strong>Converter transcrição de reunião em markdown</strong></summary>
+<summary><strong>🗣 Converter transcrição de reunião em markdown</strong></summary>
 
 ```markdown
 Você é um analista de conteúdo corporativo. Sua tarefa é converter a transcrição de uma reunião em um material **estruturado em Markdown**, organizado, visualmente limpo e totalmente fiel ao que foi discutido.
@@ -86,9 +93,14 @@ Use os recursos abaixo para garantir clareza e navegabilidade:
 🚫 **RESTRIÇÕES**  
 - NÃO adicionar interpretações, contextos externos ou complementos que não constem na transcrição.  
 - NÃO reordenar falas.  
-- NÃO editar conteúdo para “melhorar” o que foi dito — **seja fiel, mesmo que o discurso tenha ruídos**.
+- NÃO editar conteúdo para "melhorar" o que foi dito — **seja fiel, mesmo que o discurso tenha ruídos**.
 
 📌 **Foco total na objetividade, clareza e rastreabilidade do que foi discutido.**
-```
 
+---
+
+📝 **TRANSCRIÇÃO DA REUNIÃO:**  
+
+[COLE AQUI A TRANSCRIÇÃO COMPLETA DA REUNIÃO]
+```
 </details>
