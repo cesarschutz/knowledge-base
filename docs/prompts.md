@@ -71,13 +71,15 @@ Transformar a transcrição em um **resumo profissional e legível**, utilizando
 🛠️ **FORMATAÇÃO EM MARKDOWN**  
 Use os recursos abaixo para garantir clareza e navegabilidade:
 
+- NÃO utilize `#` nem `##` nem `####` nem nenhum titulo
+- Não use `---`
+
 - 🔹 **Listas com bullets** para itens discutidos.
 - 🔢 **Listas numeradas** para sequência de decisões ou etapas.
 - 🧍‍♂️**Negrito com nomes** dos participantes ao introduzir falas ou atribuições.
 - 💬 *Itálico* para observações ou sugestões levantadas.
 - 📊 **Tabelas** para listar tarefas, responsáveis, prazos ou comparativos.
 - ⏱️ **Timestamps opcionais** caso a transcrição traga marcações de tempo.
-- 📢 **Blockquotes (`>`)** para conclusões, decisões finais ou observações importantes.
 - ➕ Emojis para categorizar os blocos de forma rápida e visual:
   - ✅ Decisões
   - ❓ Dúvidas levantadas
@@ -87,6 +89,7 @@ Use os recursos abaixo para garantir clareza e navegabilidade:
 
 🧾 **SAÍDA FINAL**  
 - NÃO utilizar títulos com `#`.  
+- NÃO utilizar `---`.  
 - A saída deve ser impressa como **bloco de código Markdown completo**.  
 - Ao final, inclua um **resumo geral em blockquote**, destacando as decisões e próximos passos.  
 
