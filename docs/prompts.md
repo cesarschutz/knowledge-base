@@ -29,8 +29,6 @@ INSTRUÇÕES ESTRITAS:
      Explicação objetiva e fiel, baseada **única e exclusivamente** no conteúdo da aula.  
     *(compacta; sem repetir exemplos ou linguagem redundante)*
 
-   - **O título NÃO deve ter tabulação.**
-   - **O texto explicativo deve começar com tabulação** (4 espaços) para organização visual.
    - Dois espaços no final da linha do **título**, antes da quebra.
    - Linha em branco entre título e explicação.
    - Sem espaços extras em outras linhas.
