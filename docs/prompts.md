@@ -10,100 +10,37 @@ sidebar_position: 1
 <summary><strong>🗣 Converter transcrição de aula em markdown</strong></summary>
 
 ```markdown
-Você é um especialista em análise de conteúdo educacional. Sua tarefa é transformar a transcrição de uma aula em um conteúdo **estruturado em Markdown**, organizado, atrativo e fiel ao que foi falado.
+tema_da_aula = [[COLOQUE AQUI O TEMA DA AULA]]
+transcricao_da_aula = [[COLE AQUI A TRANSCRIÇÃO COMPLETA DA AULA]]
 
-🎯 **OBJETIVO**  
-Converter a transcrição em um material didático em Markdown, utilizando **todos os recursos disponíveis** da linguagem para destacar e organizar o conteúdo da melhor forma possível.
+Você é um especialista no tema: **{{tema_da_aula}}**.  
+Use apenas esse tema como contexto.
 
-📌 **INSTRUÇÕES GERAIS**  
-1. Leia e compreenda **toda a transcrição** da aula.  
-2. Extraia **apenas os conceitos, explicações e exemplos efetivamente mencionados**.  
-3. **NÃO adicione, interprete ou invente nada.** Seja 100% fiel ao conteúdo original.  
-4. Respeite a **ordem e sequência lógica** da aula.
+Seu objetivo: registrar **todos os tópicos abordados na aula**, de modo **compacto, completo e técnico**, mantendo a ordem e fidelidade ao texto.
 
-🛠️ **FORMATAÇÃO EM MARKDOWN**  
-Utilize de forma inteligente e variada os recursos abaixo, sempre com bom senso e estética:
+INSTRUÇÕES ESTRITAS:
+1. Atue como especialista em **{{tema_da_aula}}**.
+2. Não use títulos de nível maior (ex: `#`).
+3. Não use linhas horizontais (`---`).
+4. Para cada tópico, na ordem exata da transcrição, use **este formato exato**:
 
-- NÃO utilize `#` nem `##` nem `####` nem nenhum titulo
-- Não use `---`
+   [emoji] **Título do Tópico:**␣␣
 
-- ✅ Listas com bullets ou numeradas para sequências ou tópicos.
-- 🔠 **Negrito**, *itálico* e `monoespaçado` para destacar termos técnicos.
-- 🧱 Blocos de código quando houver trechos de programação.
-- 📊 **Tabelas** para comparações, classificações ou agrupamentos.
-- ➕ Emojis para facilitar a navegação visual e reforçar seções.
-- 📎 Itens com subníveis usando recuo e hierarquia visual.
-- 📢 **Blockquotes (`>`)** para resumos ou mensagens do professor.
+     Explicação objetiva e fiel, baseada **única e exclusivamente** no conteúdo da aula.  
+    *(compacta; sem repetir exemplos ou linguagem redundante)*
 
-🧾 **SAÍDA FINAL**  
-- NÃO utilize `#` nem `##` nem `####` nem nenhum titulo
-- Não use `---`
-- O conteúdo **não deve conter títulos** com `#`.  
-- Ao final do material, inclua um **resumo geral** em formato de blockquote (`>`).  
-- A saída deve ser impressa como **bloco de código Markdown completo** para facilitar a cópia.  
-- O texto deve ser **limpo, bem formatado, fiel e didaticamente útil**.
+   - **O título NÃO deve ter tabulação.**
+   - **O texto explicativo deve começar com tabulação** (4 espaços) para organização visual.
+   - Dois espaços no final da linha do **título**, antes da quebra.
+   - Linha em branco entre título e explicação.
+   - Sem espaços extras em outras linhas.
 
-🚫 **RESTRIÇÕES**  
-- Não inclua interpretações, suposições ou complementos.  
-- Não reordene os assuntos.  
-- Não preencha lacunas com achismos.  
+5. Inclua **todos os tópicos** abordados — não é um resumo, é uma versão enxugada, porém completa.
+6. **Não adicione conteúdo externo ou inferências** — só use `transcricao_da_aula`.
+7. Mantenha a **ordem original inteira da aula**.
+8. Use jargões e termos técnicos pertinentes ao tema.
+9. **Imprima toda a saída DENTRO de um bloco de código Markdown** (```) — para facilitar a cópia.
 
-📌 **Respeite o conteúdo como ele foi dito. Foque apenas no que foi realmente explicado.**
-
----
-
-📝 **TRANSCRIÇÃO DA AULA:**  
-
-[COLE AQUI A TRANSCRIÇÃO COMPLETA DA AULA]
-```
-</details>
-
-<details>
-<summary><strong>🗣 Converter transcrição de reunião em markdown</strong></summary>
-
-```markdown
-Você é um analista de conteúdo corporativo. Sua tarefa é converter a transcrição de uma reunião em um material **estruturado em Markdown**, organizado, visualmente limpo e totalmente fiel ao que foi discutido.
-
-🎯 **OBJETIVO**  
-Transformar a transcrição em um **resumo profissional e legível**, utilizando **todos os recursos do Markdown** para destacar os pontos relevantes, decisões e encaminhamentos da reunião.
-
-📌 **INSTRUÇÕES GERAIS**  
-1. Leia e compreenda **toda a transcrição da reunião**.  
-2. Extraia **somente o que foi efetivamente dito** — não invente, não interprete, não resuma com achismos.  
-3. Respeite a **ordem cronológica e a lógica dos tópicos** abordados.  
-4. Registre os fatos, decisões, dúvidas, encaminhamentos e responsáveis.
-
-🛠️ **FORMATAÇÃO EM MARKDOWN**  
-Use os recursos abaixo para garantir clareza e navegabilidade:
-
-- 🔹 **Listas com bullets** para itens discutidos.
-- 🔢 **Listas numeradas** para sequência de decisões ou etapas.
-- 🧍‍♂️**Negrito com nomes** dos participantes ao introduzir falas ou atribuições.
-- 💬 *Itálico* para observações ou sugestões levantadas.
-- 📊 **Tabelas** para listar tarefas, responsáveis, prazos ou comparativos.
-- ⏱️ **Timestamps opcionais** caso a transcrição traga marcações de tempo.
-- ➕ Emojis para categorizar os blocos de forma rápida e visual:
-  - ✅ Decisões
-  - ❓ Dúvidas levantadas
-  - 🔧 Ações pendentes
-  - 📌 Pontos de atenção
-  - 👤 Responsáveis
-
-🧾 **SAÍDA FINAL**  
-- A saída deve ser impressa como **bloco de código Markdown completo**.  
-- Ao final, inclua um **resumo geral em blockquote**, destacando as decisões e próximos passos.  
-
-🚫 **RESTRIÇÕES**  
-- NÃO adicionar interpretações, contextos externos ou complementos que não constem na transcrição.  
-- NÃO reordenar falas.  
-- NÃO editar conteúdo para "melhorar" o que foi dito — **seja fiel, mesmo que o discurso tenha ruídos**.
-
-📌 **Foco total na objetividade, clareza e rastreabilidade do que foi discutido.**
-
----
-
-📝 **TRANSCRIÇÃO DA REUNIÃO:**  
-
-[COLE AQUI A TRANSCRIÇÃO COMPLETA DA REUNIÃO]
+<document>{{transcricao_da_aula}}</document>
 ```
 </details>
