@@ -24,6 +24,9 @@ Converter a transcrição em um material didático em Markdown, utilizando **tod
 🛠️ **FORMATAÇÃO EM MARKDOWN**  
 Utilize de forma inteligente e variada os recursos abaixo, sempre com bom senso e estética:
 
+- NÃO utilize `#` nem `##` nem `####` nem nenhum titulo
+- Não use `---`
+
 - ✅ Listas com bullets ou numeradas para sequências ou tópicos.
 - 🔠 **Negrito**, *itálico* e `monoespaçado` para destacar termos técnicos.
 - 🧱 Blocos de código quando houver trechos de programação.
@@ -33,6 +36,8 @@ Utilize de forma inteligente e variada os recursos abaixo, sempre com bom senso 
 - 📢 **Blockquotes (`>`)** para resumos ou mensagens do professor.
 
 🧾 **SAÍDA FINAL**  
+- NÃO utilize `#` nem `##` nem `####` nem nenhum titulo
+- Não use `---`
 - O conteúdo **não deve conter títulos** com `#`.  
 - Ao final do material, inclua um **resumo geral** em formato de blockquote (`>`).  
 - A saída deve ser impressa como **bloco de código Markdown completo** para facilitar a cópia.  
@@ -71,9 +76,6 @@ Transformar a transcrição em um **resumo profissional e legível**, utilizando
 🛠️ **FORMATAÇÃO EM MARKDOWN**  
 Use os recursos abaixo para garantir clareza e navegabilidade:
 
-- NÃO utilize `#` nem `##` nem `####` nem nenhum titulo
-- Não use `---`
-
 - 🔹 **Listas com bullets** para itens discutidos.
 - 🔢 **Listas numeradas** para sequência de decisões ou etapas.
 - 🧍‍♂️**Negrito com nomes** dos participantes ao introduzir falas ou atribuições.
@@ -88,8 +90,6 @@ Use os recursos abaixo para garantir clareza e navegabilidade:
   - 👤 Responsáveis
 
 🧾 **SAÍDA FINAL**  
-- NÃO utilizar títulos com `#`.  
-- NÃO utilizar `---`.  
 - A saída deve ser impressa como **bloco de código Markdown completo**.  
 - Ao final, inclua um **resumo geral em blockquote**, destacando as decisões e próximos passos.  
 
