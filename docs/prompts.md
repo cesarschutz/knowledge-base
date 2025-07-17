@@ -15,7 +15,7 @@ sidebar_position: 1
 Analise a transcrição e produza um resumo **extremamente conciso** que capture apenas a essência do conteúdo.
 
 ## 🎯 Objetivo:
-Criar um documento de **revisão rápida** com no máximo 34-60% do tamanho original.
+Criar um documento de **revisão rápida** com no máximo 30-60% do tamanho original.
 
 ## ✏️ Formatação:
 
