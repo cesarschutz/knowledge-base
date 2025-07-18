@@ -151,5 +151,10 @@ Fundamentos de consenso distribuído, incluindo mecanismos de sincronização, a
 9. **IMPORTANTE**: Use todos os recursos do markdown disponíveis (exceto títulos # e linhas ---)
 10. **IMPORTANTE**: Mantenha o foco no conteúdo original - não adicione informações externas
 11. **IMPORTANTE**: O emoji do tópico deve ter relação direta com o nome/conteúdo do tópico
+12. **CRÍTICO**: **EDITAR O ARQUIVO DIRETAMENTE** - não imprimir o resultado, mas usar as ferramentas de edição para modificar o arquivo original
+
+## AÇÃO FINAL:
+
+**SUBSTITUA TODO O CONTEÚDO DO ARQUIVO** com as anotações estruturadas criadas, mantendo apenas o nome do arquivo original.
 
 </details>
