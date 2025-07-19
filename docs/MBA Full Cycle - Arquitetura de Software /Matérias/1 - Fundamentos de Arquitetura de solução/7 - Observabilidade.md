@@ -1,3 +1,9 @@
+---
+id: observabilidade
+title: 📈 Observabilidade
+slug: /mba-observabilidade
+---
+
 # 📈 Observabilidade
 
 ## **Falando sobre Observabilidade** {#falando-sobre-observabilidade}

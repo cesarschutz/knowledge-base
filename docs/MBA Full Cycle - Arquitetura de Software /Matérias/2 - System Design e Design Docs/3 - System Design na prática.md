@@ -1,3 +1,9 @@
+---
+id: system-design-pratica
+title: 🛠️ System Design na Prática
+slug: /mba-system-design-pratica
+---
+
 # 🛠️ System Design na prática
 
 ## **🔄 Próximos passos**

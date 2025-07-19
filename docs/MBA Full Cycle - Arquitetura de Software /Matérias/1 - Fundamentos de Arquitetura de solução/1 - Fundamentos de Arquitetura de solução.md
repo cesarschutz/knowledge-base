@@ -1,3 +1,9 @@
+---
+id: fundamentos-arquitetura-solucao
+title: 🧱 Fundamentos de Arquitetura de solução
+slug: /mba-fundamentos-arquitetura-solucao
+---
+
 # 🧱 Fundamentos de Arquitetura de solução
 
 🚀 **Esta matéria estabelece os fundamentos essenciais para compreender e aplicar arquitetura de soluções em ambientes enterprise.**

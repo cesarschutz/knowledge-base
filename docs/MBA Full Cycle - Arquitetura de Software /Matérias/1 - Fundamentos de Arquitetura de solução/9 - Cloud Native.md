@@ -1,3 +1,9 @@
+---
+id: cloud-native
+title: 🌐 Cloud Native
+slug: /mba-cloud-native
+---
+
 # 🌐 Cloud Native
 
 ## **Introdução** {#introdução-1}

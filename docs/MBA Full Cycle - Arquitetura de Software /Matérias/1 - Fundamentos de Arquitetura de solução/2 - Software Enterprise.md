@@ -1,3 +1,9 @@
+---
+id: software-enterprise
+title: 🏢 Software Enterprise
+slug: /mba-software-enterprise
+---
+
 # 🏢 Software Enterprise
 
 ## **Softwares enterprise** {#softwares-enterprise}

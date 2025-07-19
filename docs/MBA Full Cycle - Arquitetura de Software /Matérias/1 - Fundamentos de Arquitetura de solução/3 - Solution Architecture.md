@@ -1,3 +1,9 @@
+---
+id: solution-architecture
+title: 🧠 Solution Architecture
+slug: /mba-solution-architecture
+---
+
 # 🧠 Solution Architecture
 
 ## **O que é arquitetura de solução**   {#o-que-é-arquitetura-de-solução}

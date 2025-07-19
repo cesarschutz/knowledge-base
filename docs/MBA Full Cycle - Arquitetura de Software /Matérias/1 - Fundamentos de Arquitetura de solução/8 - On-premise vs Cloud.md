@@ -1,3 +1,9 @@
+---
+id: on-premise-vs-cloud
+title: 🔄 On-premise vs Cloud
+slug: /mba-on-premise-vs-cloud
+---
+
 # 🔄 On-premise vs Cloud
 
 ## **Contexto** {#contexto}

@@ -1,3 +1,9 @@
+---
+id: system-design
+title: 🧠 System Design
+slug: /mba-system-design
+---
+
 # 🧠 System Design
 
 ## 🚀 **Introdução**

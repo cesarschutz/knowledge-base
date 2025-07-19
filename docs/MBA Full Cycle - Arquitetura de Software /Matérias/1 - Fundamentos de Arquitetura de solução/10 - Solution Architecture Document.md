@@ -1,3 +1,9 @@
+---
+id: solution-architecture-document
+title: 📑 Solution Architecture Document
+slug: /mba-solution-architecture-document
+---
+
 # 📑 Solution Architecture Document
 
 ## **Introdução ao SAD** {#introdução-ao-sad}

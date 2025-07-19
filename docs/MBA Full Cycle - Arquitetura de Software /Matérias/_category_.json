@@ -2,7 +2,7 @@
   "label": "📁 Matérias",
   "position": 2,
   "link": {
-    "type": "generated-index",
-    "description": "Matérias do MBA Full Cycle - Arquitetura de Software."
+    "type": "doc",
+    "id": "materias-index"
   }
 } 

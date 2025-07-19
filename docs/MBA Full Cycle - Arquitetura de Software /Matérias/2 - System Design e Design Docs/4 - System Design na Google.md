@@ -1,3 +1,9 @@
+---
+id: system-design-google
+title: 🏢 System Design na Google
+slug: /mba-system-design-google
+---
+
 # 🏢 System Design na Google
 
 ## **Apresentação e Fundamentos**

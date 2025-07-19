@@ -1,3 +1,9 @@
+---
+id: system-design-design-docs
+title: 🧩 System Design e Design Docs
+slug: /mba-system-design-design-docs
+---
+
 # 🧩 System Design e Design Docs
 
 ## **📄 Informações Gerais** {#📄-informações-gerais}

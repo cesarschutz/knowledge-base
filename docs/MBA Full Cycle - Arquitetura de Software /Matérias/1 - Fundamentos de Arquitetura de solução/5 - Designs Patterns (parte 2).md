@@ -1,3 +1,9 @@
+---
+id: designs-patterns-parte-2
+title: 🔁 Designs Patterns (Parte 2)
+slug: /mba-designs-patterns-parte-2
+---
+
 # 🔁 Designs Patterns (parte 2)
 
 ## **Configuration** {#configuration}

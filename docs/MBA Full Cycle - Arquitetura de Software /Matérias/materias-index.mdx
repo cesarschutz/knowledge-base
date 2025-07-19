@@ -1,0 +1,195 @@
+---
+title: 📚 Índice das Matérias
+description: Navegue por todas as matérias do MBA Full Cycle - Arquitetura de Software
+---
+
+import styles from './materias-index.module.css';
+import Link from '@docusaurus/Link';
+
+# 📚 Índice das Matérias
+
+<div className={styles.container}>
+  <div className={styles.materiaSection}>
+    <button
+      className={styles.materiaHeader}
+      onClick={() => {
+        const content = document.getElementById('materia1-content');
+        const icon = document.getElementById('materia1-icon');
+        if (content.style.display === 'none') {
+          content.style.display = 'block';
+          icon.textContent = '📖';
+        } else {
+          content.style.display = 'none';
+          icon.textContent = '📁';
+        }
+      }}
+    >
+      <span id="materia1-icon" className={styles.materiaIcon}>📁</span>
+      <h2 className={styles.materiaTitle}>
+        🧱 Fundamentos de Arquitetura de Solução
+      </h2>
+      <span className={styles.expandIcon}>▼</span>
+    </button>
+
+    <div id="materia1-content" className={styles.materiaContent} style={{display: 'none'}}>
+      <p className={styles.materiaDescription}>
+        Fundamentos essenciais para compreender arquitetura de software, incluindo conceitos de software enterprise, 
+        solution architecture, design patterns, frameworks da AWS, observabilidade e arquiteturas cloud-native.
+      </p>
+      
+      <div className={styles.topicsGrid}>
+        <Link to="/docs/mba-fundamentos-arquitetura-solucao" className={styles.topicCard}>
+          <div className={styles.topicNumber}>01</div>
+          <div className={styles.topicContent}>
+            <h3>🧱 Fundamentos de Arquitetura de Solução</h3>
+            <p>Conceitos básicos e fundamentais</p>
+          </div>
+        </Link>
+        
+        <Link to="/docs/mba-software-enterprise" className={styles.topicCard}>
+          <div className={styles.topicNumber}>02</div>
+          <div className={styles.topicContent}>
+            <h3>🏢 Software Enterprise</h3>
+            <p>Desenvolvimento de software corporativo</p>
+          </div>
+        </Link>
+        
+        <Link to="/docs/mba-solution-architecture" className={styles.topicCard}>
+          <div className={styles.topicNumber}>03</div>
+          <div className={styles.topicContent}>
+            <h3>🧠 Solution Architecture</h3>
+            <p>Arquitetura de soluções</p>
+          </div>
+        </Link>
+        
+        <Link to="/docs/mba-designs-patterns" className={styles.topicCard}>
+          <div className={styles.topicNumber}>04</div>
+          <div className={styles.topicContent}>
+            <h3>🧩 Designs Patterns</h3>
+            <p>Padrões de projeto</p>
+          </div>
+        </Link>
+        
+        <Link to="/docs/mba-designs-patterns-parte-2" className={styles.topicCard}>
+          <div className={styles.topicNumber}>05</div>
+          <div className={styles.topicContent}>
+            <h3>🔁 Designs Patterns (Parte 2)</h3>
+            <p>Continuação dos padrões de projeto</p>
+          </div>
+        </Link>
+        
+        <Link to="/docs/mba-aws-well-architecture-framework" className={styles.topicCard}>
+          <div className={styles.topicNumber}>06</div>
+          <div className={styles.topicContent}>
+            <h3>☁️ AWS Well-Architecture Framework</h3>
+            <p>Framework de arquitetura da AWS</p>
+          </div>
+        </Link>
+        
+        <Link to="/docs/mba-observabilidade" className={styles.topicCard}>
+          <div className={styles.topicNumber}>07</div>
+          <div className={styles.topicContent}>
+            <h3>📈 Observabilidade</h3>
+            <p>Monitoramento e observação de sistemas</p>
+          </div>
+        </Link>
+        
+        <Link to="/docs/mba-on-premise-vs-cloud" className={styles.topicCard}>
+          <div className={styles.topicNumber}>08</div>
+          <div className={styles.topicContent}>
+            <h3>🔄 On-premise vs Cloud</h3>
+            <p>Comparação entre infraestruturas</p>
+          </div>
+        </Link>
+        
+        <Link to="/docs/mba-cloud-native" className={styles.topicCard}>
+          <div className={styles.topicNumber}>09</div>
+          <div className={styles.topicContent}>
+            <h3>🌐 Cloud Native</h3>
+            <p>Aplicações nativas para nuvem</p>
+          </div>
+        </Link>
+        
+        <Link to="/docs/mba-solution-architecture-document" className={styles.topicCard}>
+          <div className={styles.topicNumber}>10</div>
+          <div className={styles.topicContent}>
+            <h3>📑 Solution Architecture Document</h3>
+            <p>Documentação de arquitetura</p>
+          </div>
+        </Link>
+        
+        <Link to="/docs/mba-questionarios" className={styles.topicCard}>
+          <div className={styles.topicNumber}>11</div>
+          <div className={styles.topicContent}>
+            <h3>📝 Questionário</h3>
+            <p>Exercícios e avaliações</p>
+          </div>
+        </Link>
+      </div>
+    </div>
+  </div>
+
+  <div className={styles.materiaSection}>
+    <button
+      className={styles.materiaHeader}
+      onClick={() => {
+        const content = document.getElementById('materia2-content');
+        const icon = document.getElementById('materia2-icon');
+        if (content.style.display === 'none') {
+          content.style.display = 'block';
+          icon.textContent = '📖';
+        } else {
+          content.style.display = 'none';
+          icon.textContent = '📁';
+        }
+      }}
+    >
+      <span id="materia2-icon" className={styles.materiaIcon}>📁</span>
+      <h2 className={styles.materiaTitle}>
+        🧩 System Design e Design Docs
+      </h2>
+      <span className={styles.expandIcon}>▼</span>
+    </button>
+
+    <div id="materia2-content" className={styles.materiaContent} style={{display: 'none'}}>
+      <p className={styles.materiaDescription}>
+        Aprofundamento em design de sistemas, incluindo práticas da Google, documentação de design 
+        e aplicação prática dos conceitos de system design em cenários reais.
+      </p>
+      
+      <div className={styles.topicsGrid}>
+        <Link to="/docs/mba-system-design-design-docs" className={styles.topicCard}>
+          <div className={styles.topicNumber}>01</div>
+          <div className={styles.topicContent}>
+            <h3>🧩 System Design e Design Docs</h3>
+            <p>Introdução ao design de sistemas</p>
+          </div>
+        </Link>
+        
+        <Link to="/docs/mba-system-design" className={styles.topicCard}>
+          <div className={styles.topicNumber}>02</div>
+          <div className={styles.topicContent}>
+            <h3>🧠 System Design</h3>
+            <p>Conceitos de design de sistemas</p>
+          </div>
+        </Link>
+        
+        <Link to="/docs/mba-system-design-pratica" className={styles.topicCard}>
+          <div className={styles.topicNumber}>03</div>
+          <div className={styles.topicContent}>
+            <h3>🛠️ System Design na Prática</h3>
+            <p>Aplicação prática dos conceitos</p>
+          </div>
+        </Link>
+        
+        <Link to="/docs/mba-system-design-google" className={styles.topicCard}>
+          <div className={styles.topicNumber}>04</div>
+          <div className={styles.topicContent}>
+            <h3>🏢 System Design na Google</h3>
+            <p>Práticas da Google em design de sistemas</p>
+          </div>
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>

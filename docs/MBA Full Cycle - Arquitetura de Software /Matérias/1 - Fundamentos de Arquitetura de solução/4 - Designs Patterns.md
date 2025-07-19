@@ -1,3 +1,9 @@
+---
+id: designs-patterns
+title: 🧩 Designs Patterns
+slug: /mba-designs-patterns
+---
+
 # 🧩 Designs Patterns
 
 ## **Design Patterns** {#design-patterns}

@@ -1,3 +1,9 @@
+---
+id: aws-well-architecture-framework
+title: ☁️ AWS Well-Architecture Framework
+slug: /mba-aws-well-architecture-framework
+---
+
 # ☁️ AWS Well-Architecture Framework
 
 ## **Arquitetura de solução para cloud** {#arquitetura-de-solução-para-cloud}

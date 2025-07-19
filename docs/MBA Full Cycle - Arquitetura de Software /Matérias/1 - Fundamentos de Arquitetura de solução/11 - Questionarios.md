@@ -1,4 +1,10 @@
-# 📝 Questionário
+---
+id: questionarios
+title: 📝 Questionários
+slug: /mba-questionarios
+---
+
+# 📝 Questionários
 
 ## 🏗️ Solution Architecture
 
