@@ -6,6 +6,8 @@ slug: /mba-prompt-engineering-para-devs
 
 ## 🚀 **Prompt Engineering para Desenvolvedores**
 
+Material apresetnado em aula: https://drive.google.com/file/d/18G8gn3zYEbdnOWxJMuSJVOLvPbJf8kov/view
+
 ### 📚 **Referências Acadêmicas**
 - https://arxiv.org/abs/2005.14165  
 - https://microsoft.github.io/prompt-engineering/  
