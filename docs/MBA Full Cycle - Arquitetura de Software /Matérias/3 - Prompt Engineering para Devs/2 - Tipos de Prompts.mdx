@@ -1,0 +1,721 @@
+---
+id: tipos-de-prompts
+title: 🎯 Tipos de Prompts para Desenvolvedores
+slug: /tipos-de-prompts
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# 🎯 Tipos de Prompts para Desenvolvedores
+
+<div style={{
+  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+  padding: '20px',
+  borderRadius: '10px',
+  color: 'white',
+  marginBottom: '30px'
+}}>
+  <h2 style={{color: 'white', marginBottom: '10px'}}>🤖 O que é Engenharia de Prompt?</h2>
+  <p style={{fontSize: '18px', lineHeight: '1.6'}}>
+    <strong>Engenharia de Prompt</strong> é a arte e ciência de criar instruções precisas e eficazes para modelos de IA generativa, especialmente para desenvolvedores que precisam de respostas técnicas, código limpo e soluções arquiteturais robustas.
+  </p>
+</div>
+
+## 🛠️ Por que é Crucial para Desenvolvedores?
+
+<div className="row">
+  <div className="col col--4">
+    <div style={{
+      background: '#f8f9fa',
+      padding: '20px',
+      borderRadius: '8px',
+      textAlign: 'center',
+      height: '100%'
+    }}>
+      <h3>⚡ Produtividade</h3>
+      <p>Acelera desenvolvimento com código gerado automaticamente</p>
+    </div>
+  </div>
+  <div className="col col--4">
+    <div style={{
+      background: '#f8f9fa',
+      padding: '20px',
+      borderRadius: '8px',
+      textAlign: 'center',
+      height: '100%'
+    }}>
+      <h3>🎯 Precisão</h3>
+      <p>Obtém soluções específicas para problemas técnicos complexos</p>
+    </div>
+  </div>
+  <div className="col col--4">
+    <div style={{
+      background: '#f8f9fa',
+      padding: '20px',
+      borderRadius: '8px',
+      textAlign: 'center',
+      height: '100%'
+    }}>
+      <h3>🧠 Aprendizado</h3>
+      <p>Explora novas tecnologias e padrões de design</p>
+    </div>
+  </div>
+</div>
+
+---
+
+## 📚 Os 8 Tipos Essenciais de Prompts
+
+### 1. 🎯 **Zero-Shot Prompting**
+
+<div style={{
+  background: '#e3f2fd',
+  border: '1px solid #2196f3',
+  borderRadius: '8px',
+  padding: '20px',
+  marginBottom: '20px'
+}}>
+  <h4>💡 Conceito</h4>
+  <p>Técnica onde você faz uma pergunta direta sem fornecer exemplos prévios. O modelo usa apenas seu conhecimento pré-treinado.</p>
+</div>
+
+**📝 Exemplo Prático:**
+
+```python
+# Prompt: "Crie uma função Python para validar CPF"
+
+def validar_cpf(cpf):
+    # Remove caracteres não numéricos
+    cpf = ''.join(filter(str.isdigit, cpf))
+    
+    # Verifica se tem 11 dígitos
+    if len(cpf) != 11:
+        return False
+    
+    # Verifica se todos os dígitos são iguais
+    if cpf == cpf[0] * 11:
+        return False
+    
+    # Validação do primeiro dígito verificador
+    soma = sum(int(cpf[i]) * (10 - i) for i in range(9))
+    digito1 = (soma * 10) % 11
+    if digito1 == 10:
+        digito1 = 0
+    
+    if int(cpf[9]) != digito1:
+        return False
+    
+    # Validação do segundo dígito verificador
+    soma = sum(int(cpf[i]) * (11 - i) for i in range(10))
+    digito2 = (soma * 10) % 11
+    if digito2 == 10:
+        digito2 = 0
+    
+    return int(cpf[10]) == digito2
+```
+
+**🎯 Quando Usar:**
+- ✅ Tarefas simples e diretas
+- ✅ Quando você tem confiança na base de conhecimento da IA
+- ✅ Prototipagem rápida
+- ✅ Perguntas conceituais
+
+**🔗 Links Úteis:**
+- [OpenAI Guide - Zero-shot prompting](https://platform.openai.com/docs/guides/prompt-engineering)
+- [Anthropic - Prompt Engineering Guide](https://docs.anthropic.com/claude/docs/prompt-engineering)
+
+---
+
+### 2. 🔢 **One-Shot / Few-Shot Prompting**
+
+<div style={{
+  background: '#f3e5f5',
+  border: '1px solid #9c27b0',
+  borderRadius: '8px',
+  padding: '20px',
+  marginBottom: '20px'
+}}>
+  <h4>💡 Conceito</h4>
+  <p><strong>One-Shot:</strong> Fornece 1 exemplo antes da tarefa.<br/>
+  <strong>Few-Shot:</strong> Fornece 2-5 exemplos para ensinar o padrão desejado.</p>
+</div>
+
+**1️⃣ One-Shot Example:**
+
+```typescript
+// Prompt: "Converta para TypeScript seguindo o padrão:
+// Exemplo: function soma(a, b) { return a + b; }
+// TypeScript: const soma = (a: number, b: number): number => a + b;
+
+// JavaScript:
+function calcularDesconto(preco, percentual) {
+  return preco - (preco * percentual / 100);
+}
+
+// TypeScript:
+const calcularDesconto = (preco: number, percentual: number): number => 
+  preco - (preco * percentual / 100);
+```
+
+**🔢 Few-Shot Example:**
+
+```javascript
+// Prompt: "Crie testes seguindo o padrão dos exemplos:"
+
+// Exemplo 1:
+describe('isEven', () => {
+  it('should return true for even numbers', () => {
+    expect(isEven(4)).toBe(true);
+  });
+});
+
+// Exemplo 2:
+describe('capitalize', () => {
+  it('should capitalize first letter', () => {
+    expect(capitalize('hello')).toBe('Hello');
+  });
+});
+
+// Para: function isPalindrome(str) { return str === str.split('').reverse().join(''); }
+describe('isPalindrome', () => {
+  it('should return true for palindromes', () => {
+    expect(isPalindrome('radar')).toBe(true);
+  });
+  
+  it('should return false for non-palindromes', () => {
+    expect(isPalindrome('hello')).toBe(false);
+  });
+});
+```
+
+**✨ Vantagens:**
+- 🎯 **Maior Precisão:** Exemplos guiam o formato de saída
+- 🔄 **Consistência:** Mantém padrões estabelecidos
+- 🎨 **Estilo Personalizado:** Ensina convenções específicas
+- 🛡️ **Menor Ambiguidade:** Reduz interpretações incorretas
+
+---
+
+### 3. 🧠 **Chain of Thought (CoT)**
+
+<div style={{
+  background: '#e8f5e8',
+  border: '1px solid #4caf50',
+  borderRadius: '8px',
+  padding: '20px',
+  marginBottom: '20px'
+}}>
+  <h4>💡 Conceito</h4>
+  <p>Encoraja a IA a mostrar seu raciocínio passo a passo, especialmente útil para problemas complexos de lógica e arquitetura.</p>
+</div>
+
+**🔍 Exemplo - Algoritmo:**
+
+```python
+# Prompt: "Explique passo a passo como implementar busca binária"
+
+# Passo 1: Entender o Problema
+# - Busca binária funciona apenas em arrays ordenados
+# - Divide o problema pela metade a cada iteração
+# - Complexidade: O(log n)
+
+# Passo 2: Definir Variáveis
+# - inicio: índice inicial (0)
+# - fim: índice final (len(array) - 1)  
+# - meio: índice do meio ((inicio + fim) // 2)
+
+# Passo 3: Implementação
+def busca_binaria(arr, target):
+    inicio = 0
+    fim = len(arr) - 1
+    
+    while inicio <= fim:
+        meio = (inicio + fim) // 2
+        
+        if arr[meio] == target:
+            return meio
+        elif arr[meio] > target:
+            fim = meio - 1
+        else:
+            inicio = meio + 1
+    
+    return -1  # Não encontrado
+
+# Passo 4: Teste
+numeros = [1, 3, 5, 7, 9, 11, 13]
+resultado = busca_binaria(numeros, 7)
+print(f"Elemento encontrado no índice: {resultado}")  # Output: 3
+```
+
+**🏗️ Exemplo - Arquitetura:**
+
+```text
+Prompt: "Pense passo a passo: como estruturar uma API REST para e-commerce?"
+
+Passo 1: Identificar Entidades Principais
+- Usuários (customers, admins)
+- Produtos (products)
+- Pedidos (orders)
+- Carrinho (cart)
+- Pagamentos (payments)
+
+Passo 2: Definir Endpoints RESTful
+GET    /api/products          # Listar produtos
+GET    /api/products/:id      # Produto específico
+POST   /api/products          # Criar produto (admin)
+PUT    /api/products/:id      # Atualizar produto (admin)
+DELETE /api/products/:id      # Deletar produto (admin)
+
+Passo 3: Estrutura de Pastas
+src/
+├── controllers/
+├── models/
+├── routes/
+├── middleware/
+├── services/
+└── utils/
+
+Passo 4: Implementar Autenticação
+- JWT para sessões
+- Middleware de autorização
+- Diferentes níveis de acesso
+```
+
+**🔗 Links Úteis:**
+- [Chain-of-Thought Prompting Paper](https://arxiv.org/abs/2201.11903)
+- [Google AI - CoT Reasoning](https://ai.googleblog.com/2022/05/language-models-perform-reasoning-via.html)
+
+---
+
+### 4. 🦴 **Skeleton of Thought (SoT)**
+
+<div style={{
+  background: '#fff3e0',
+  border: '1px solid #ff9800',
+  borderRadius: '8px',
+  padding: '20px',
+  marginBottom: '20px'
+}}>
+  <h4>💡 Conceito</h4>
+  <p>Primeiro cria um "esqueleto" ou estrutura da resposta, depois preenche os detalhes. Ideal para documentação e planejamento.</p>
+</div>
+
+**📋 Exemplo Prático:**
+
+```text
+Prompt: "Crie um guia para autenticação JWT em Node.js. 
+Primeiro o esqueleto, depois preencha."
+
+ESQUELETO DO GUIA:
+1. 📦 Dependências Necessárias
+2. ⚙️ Configuração Inicial  
+3. 🔐 Implementação do Login
+4. 🛡️ Middleware de Verificação
+5. 🚪 Rotas Protegidas
+6. 🧪 Testes
+7. 🔒 Boas Práticas de Segurança
+
+PREENCHIMENTO DETALHADO:
+
+## 1. 📦 Dependências Necessárias
+npm install jsonwebtoken bcryptjs express dotenv
+npm install --save-dev jest supertest
+
+## 2. ⚙️ Configuração Inicial
+const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key';
+const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '24h';
+
+## 3. 🔐 Implementação do Login
+const login = async (req, res) => {
+  const { email, password } = req.body;
+  const user = await User.findOne({ email });
+  
+  if (!user || !await bcrypt.compare(password, user.password)) {
+    return res.status(401).json({ message: 'Credenciais inválidas' });
+  }
+  
+  const token = jwt.sign(
+    { userId: user._id, email: user.email },
+    JWT_SECRET,
+    { expiresIn: JWT_EXPIRES_IN }
+  );
+  
+  res.json({ token, user: { id: user._id, email: user.email } });
+};
+```
+
+**🌟 Vantagens:**
+- 📋 **Estrutura Clara:** Organiza informações complexas
+- ⏱️ **Eficiência:** Permite revisão rápida da estrutura
+- 🎯 **Foco:** Cada seção tem propósito específico
+- 🔄 **Iterativo:** Pode refinar seções individualmente
+
+---
+
+### 5. 🌳 **Tree of Thought (ToT)**
+
+<div style={{
+  background: '#f1f8e9',
+  border: '1px solid #8bc34a',
+  borderRadius: '8px',
+  padding: '20px',
+  marginBottom: '20px'
+}}>
+  <h4>💡 Conceito</h4>
+  <p>Explora múltiplos caminhos de raciocínio simultaneamente, como uma árvore de decisões. Excelente para arquitetura de software e design patterns.</p>
+</div>
+
+**🎋 Exemplo - Escolha de Arquitetura:**
+
+```text
+Prompt: "Escolher entre Microserviços, Monolito Modular e Serverless 
+para e-commerce. Explore diferentes caminhos."
+
+🌿 CAMINHO 1: Análise por Complexidade
+
+Ramo A: Projeto Simples (MVP)
+- Serverless ✅
+  - Menor overhead operacional
+  - Escalabilidade automática
+  - Custo baseado em uso
+  
+Ramo B: Projeto Médio
+- Monolito Modular ✅
+  - Desenvolvimento mais rápido
+  - Menor complexidade de deploy
+  - Facilita refatoração futura
+
+Ramo C: Projeto Complexo/Enterprise
+- Microserviços ✅
+  - Escalabilidade independente
+  - Times autônomos
+  - Tecnologias heterogêneas
+
+🌿 CAMINHO 2: Análise por Time
+
+Ramo A: Time Pequeno (1-3 devs)
+- Serverless ou Monolito ✅
+  - Menos overhead de coordenação
+
+Ramo B: Time Médio (4-8 devs)
+- Monolito Modular ✅
+  - Permite divisão de responsabilidades
+
+Ramo C: Time Grande (9+ devs)
+- Microserviços ✅
+  - Permite times independentes
+
+🎯 SÍNTESE DOS CAMINHOS:
+1. Se MVP/Startup: Serverless
+2. Se crescimento controlado: Monolito Modular  
+3. Se empresa estabelecida: Microserviços
+```
+
+**🔗 Links Úteis:**
+- [Tree of Thoughts Paper](https://arxiv.org/abs/2305.10601)
+- [Decision Trees in Software Architecture](https://martinfowler.com/articles/architectural-decision-records.html)
+
+---
+
+### 6. 🔄 **Self-Consistency**
+
+<div style={{
+  background: '#fce4ec',
+  border: '1px solid #e91e63',
+  borderRadius: '8px',
+  padding: '20px',
+  marginBottom: '20px'
+}}>
+  <h4>💡 Conceito</h4>
+  <p>Gera múltiplas respostas para o mesmo problema e escolhe a mais consistente. Ideal para validação de soluções críticas.</p>
+</div>
+
+**🔍 Exemplo - Validação de Código:**
+
+```javascript
+// Prompt: "Gere 3 implementações para validar JSON em JavaScript. 
+// Compare e escolha a melhor."
+
+// IMPLEMENTAÇÃO 1: Try-Catch Simples
+function isValidJSON_v1(str) {
+  try {
+    JSON.parse(str);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+// IMPLEMENTAÇÃO 2: Com Validação de Tipo
+function isValidJSON_v2(str) {
+  if (typeof str !== 'string') return false;
+  
+  try {
+    const result = JSON.parse(str);
+    return result !== null && typeof result === 'object';
+  } catch (e) {
+    return false;
+  }
+}
+
+// IMPLEMENTAÇÃO 3: Mais Rigorosa
+function isValidJSON_v3(str) {
+  if (typeof str !== 'string' || str.trim() === '') {
+    return false;
+  }
+  
+  try {
+    const parsed = JSON.parse(str);
+    return JSON.stringify(parsed) === str.trim();
+  } catch (e) {
+    return false;
+  }
+}
+
+// ANÁLISE COMPARATIVA:
+// V1: ✅ Simples, ❌ Não robusto
+// V2: ⚡ Equilibrado, ✅ Bom para maioria dos casos
+// V3: ✅ Muito rigoroso, ❌ Pode ser lento
+
+// ESCOLHA FINAL: Implementação 2
+// Razão: Melhor equilíbrio entre simplicidade e robustez
+```
+
+---
+
+### 7. 🧭 **Directional Stimulus**
+
+<div style={{
+  background: '#e1f5fe',
+  border: '1px solid #00bcd4',
+  borderRadius: '8px',
+  padding: '20px',
+  marginBottom: '20px'
+}}>
+  <h4>💡 Conceito</h4>
+  <p>Fornece "dicas direcionais" para guiar a IA em direção ao tipo de resposta desejada. Como dar uma bússola para o modelo.</p>
+</div>
+
+**💻 Exemplo - Geração de Código:**
+
+```javascript
+// Prompt: "Crie função para processar pagamentos. 
+// 🧭 DIRECIONAMENTO: Foque em segurança, tratamento de erros e logs."
+
+const crypto = require('crypto');
+const logger = require('./logger');
+
+async function processPayment(paymentData) {
+  const transactionId = crypto.randomUUID();
+  const startTime = Date.now();
+  
+  // 🔒 Log de início (sem dados sensíveis)
+  logger.info('Payment processing started', {
+    transactionId,
+    amount: paymentData.amount,
+    currency: paymentData.currency,
+    merchantId: paymentData.merchantId,
+    timestamp: new Date().toISOString()
+  });
+  
+  try {
+    // 🛡️ Validação de segurança
+    await validatePaymentData(paymentData);
+    
+    // 🔐 Sanitização de dados sensíveis
+    const sanitizedData = sanitizePaymentData(paymentData);
+    
+    // 💳 Processamento com gateway
+    const result = await callPaymentGateway(sanitizedData, transactionId);
+    
+    // ✅ Log de sucesso
+    logger.info('Payment processed successfully', {
+      transactionId,
+      status: result.status,
+      gatewayTransactionId: result.gatewayId,
+      processingTime: Date.now() - startTime
+    });
+    
+    return {
+      success: true,
+      transactionId,
+      gatewayTransactionId: result.gatewayId,
+      status: result.status,
+      processingTime: Date.now() - startTime
+    };
+    
+  } catch (error) {
+    // 🚨 Log de erro (sem exposição de dados sensíveis)
+    logger.error('Payment processing failed', {
+      transactionId,
+      error: error.message,
+      errorCode: error.code,
+      processingTime: Date.now() - startTime,
+      merchantId: paymentData.merchantId // Não loggar dados do cartão
+    });
+    
+    throw new PaymentError('Payment processing failed', {
+      transactionId,
+      code: 'PAYMENT_FAILED'
+    });
+  }
+}
+```
+
+**🎯 Palavras-Chave para Direcionamento:**
+- **Para Análise:** "Foque em performance...", "Priorize segurança..."
+- **Para Código:** "Estilo funcional...", "Com tratamento de erros robusto..."
+- **Para Arquitetura:** "Microserviços...", "Event-driven...", "Cloud-native..."
+- **Para Documentação:** "Para iniciantes...", "Com exemplos práticos..."
+
+---
+
+### 8. ⚡ **ReActing (Reasoning + Acting)**
+
+<div style={{
+  background: '#fff8e1',
+  border: '1px solid #ffc107',
+  borderRadius: '8px',
+  padding: '20px',
+  marginBottom: '20px'
+}}>
+  <h4>💡 Conceito</h4>
+  <p>Combina raciocínio lógico com ações práticas. A IA "pensa em voz alta" sobre o que precisa fazer e depois executa ações concretas.</p>
+</div>
+
+**🐛 Exemplo - Debug de Código:**
+
+```javascript
+// Prompt: "Este código Node.js tem problema de performance. Ajude a debugar:"
+
+// CÓDIGO PROBLEMÁTICO:
+app.get('/users', async (req, res) => {
+  const users = await User.find();
+  for (let user of users) {
+    user.posts = await Post.find({ userId: user.id });
+    for (let post of user.posts) {
+      post.comments = await Comment.find({ postId: post.id });
+    }
+  }
+  res.json(users);
+});
+
+// 🤔 REASONING (Análise do Problema):
+// Identifiquei o problema: N+1 queries!
+// Se temos 100 usuários com 10 posts cada, e 5 comentários por post:
+// - 1 query para usuários
+// - 100 queries para posts  
+// - 1000 queries para comentários
+// Total: 1101 queries! 😱
+
+// ⚡ ACTING (Solução Prática):
+app.get('/users', async (req, res) => {
+  try {
+    const users = await User.find()
+      .populate({
+        path: 'posts',
+        populate: {
+          path: 'comments'
+        }
+      })
+      .lean(); // .lean() para melhor performance
+    
+    res.json(users);
+  } catch (error) {
+    res.status(500).json({ error: 'Database error' });
+  }
+});
+
+// RESULTADO: 1 query apenas! ✅
+// Melhoria: 98% mais rápido! 🚀
+```
+
+**🌟 Benefícios do ReActing:**
+- 🧠 **Reasoning:** Análise profunda e identificação de padrões
+- ⚡ **Acting:** Código funcional e soluções práticas
+- 🔄 **Ciclo Iterativo:** Problema → Análise → Ação → Validação
+- 🎨 **Casos Ideais:** Debug, arquitetura, otimização, segurança
+
+**🔗 Links Úteis:**
+- [ReAct Paper - Original Research](https://arxiv.org/abs/2210.03629)
+- [Langchain ReAct Implementation](https://python.langchain.com/docs/modules/agents/agent_types/react)
+
+---
+
+## 🎓 Resumo e Boas Práticas
+
+<div style={{
+  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+  padding: '30px',
+  borderRadius: '15px',
+  color: 'white',
+  marginTop: '40px'
+}}>
+  <h3 style={{color: 'white', textAlign: 'center', marginBottom: '20px'}}>🏆 Guia de Escolha do Tipo de Prompt</h3>
+  
+  <div className="row">
+    <div className="col col--6">
+      <h4 style={{color: '#ffd700'}}>🎯 Para Tarefas Simples:</h4>
+      <ul style={{color: 'white'}}>
+        <li><strong>Zero-Shot:</strong> Perguntas diretas</li>
+        <li><strong>Directional:</strong> Com direcionamento específico</li>
+      </ul>
+      
+      <h4 style={{color: '#ffd700'}}>🔧 Para Padronização:</h4>
+      <ul style={{color: 'white'}}>
+        <li><strong>Few-Shot:</strong> Ensinar formatos</li>
+        <li><strong>Skeleton:</strong> Estruturar documentos</li>
+      </ul>
+    </div>
+    
+    <div className="col col--6">
+      <h4 style={{color: '#ffd700'}}>🧠 Para Problemas Complexos:</h4>
+      <ul style={{color: 'white'}}>
+        <li><strong>Chain of Thought:</strong> Raciocínio lógico</li>
+        <li><strong>Tree of Thought:</strong> Múltiplas soluções</li>
+        <li><strong>ReActing:</strong> Análise + implementação</li>
+      </ul>
+      
+      <h4 style={{color: '#ffd700'}}>✅ Para Validação:</h4>
+      <ul style={{color: 'white'}}>
+        <li><strong>Self-Consistency:</strong> Comparar soluções</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+## 📚 Recursos Adicionais
+
+### 🔗 **Links Essenciais:**
+- [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
+- [Anthropic Prompt Library](https://docs.anthropic.com/claude/prompt-library)
+- [Google AI - Prompting Guide 101](https://developers.generativeai.google/guide/prompt_101)
+- [Microsoft - Prompt Engineering Techniques](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering)
+- [Prompt Engineering Institute](https://www.promptengineering.org/)
+
+### 📖 **Papers de Referência:**
+- [Chain-of-Thought Prompting](https://arxiv.org/abs/2201.11903)
+- [Tree of Thoughts](https://arxiv.org/abs/2305.10601)
+- [ReAct: Reasoning and Acting](https://arxiv.org/abs/2210.03629)
+- [Self-Consistency Improves CoT](https://arxiv.org/abs/2203.11171)
+
+### 🛠️ **Ferramentas Úteis:**
+- [PromptBase](https://promptbase.com/) - Marketplace de prompts
+- [LangChain](https://python.langchain.com/) - Framework para aplicações com LLM
+- [Prompt Flow](https://microsoft.github.io/promptflow/) - Microsoft's prompt engineering tool
+- [OpenAI Playground](https://platform.openai.com/playground) - Teste de prompts
+
+---
+
+<div style={{
+  textAlign: 'center',
+  padding: '20px',
+  background: '#f8f9fa',
+  borderRadius: '10px',
+  marginTop: '30px'
+}}>
+  <h3>🚀 Próximos Passos</h3>
+  <p><strong>Pratique cada técnica com seus próprios problemas de desenvolvimento!</strong></p>
+  <p>A maestria em Prompt Engineering vem com a experimentação constante. 💪</p>
+</div>
