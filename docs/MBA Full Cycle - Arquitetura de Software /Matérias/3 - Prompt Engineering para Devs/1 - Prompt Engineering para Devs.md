@@ -4,21 +4,21 @@ title: 🤖 Prompt Engineering Para Devs
 slug: /mba-prompt-engineering-para-devs
 ---
 
-## 🚀 Prompt Engineering para Desenvolvedores
+## 🚀 **Prompt Engineering para Desenvolvedores**
 
-links:  
-https://arxiv.org/abs/2005.14165  
-https://microsoft.github.io/prompt-engineering/  
-https://arxiv.org/abs/2201.11903  
-https://arxiv.org/abs/2307.15337  
-https://arxiv.org/abs/2305.10601  
-https://arxiv.org/abs/2203.11171  
-https://arxiv.org/abs/2210.11416  
-https://arxiv.org/abs/2210.03629  
+### 📚 **Referências Acadêmicas**
+- https://arxiv.org/abs/2005.14165  
+- https://microsoft.github.io/prompt-engineering/  
+- https://arxiv.org/abs/2201.11903  
+- https://arxiv.org/abs/2307.15337  
+- https://arxiv.org/abs/2305.10601  
+- https://arxiv.org/abs/2203.11171  
+- https://arxiv.org/abs/2210.11416  
+- https://arxiv.org/abs/2210.03629
 
 
 
-## 📝 O que é Prompt Engineering
+## 📝 **O que é Prompt Engineering**
 
 A engenharia de prompts é o processo em que você orienta as soluções de **inteligência artificial generativa (IA generativa)** para gerar os resultados desejados.
 
@@ -26,7 +26,7 @@ Embora a IA generativa tente imitar os humanos, ela requer instruções detalhad
 
 Na engenharia de prompt, você escolhe os formatos, frases, palavras e símbolos mais adequados para orientar a IA a interagir com seus usuários de forma mais significativa.
 
-## 🎯 Importância para Desenvolvedores
+## 🎯 **Importância para Desenvolvedores**
 
 - **Desenvolver e manter**
 - **Explorar possibilidades**
@@ -35,7 +35,7 @@ Na engenharia de prompt, você escolhe os formatos, frases, palavras e símbolos
 - **Auxiliar em processos complexos de desenvolvimento**
 - **Aprimorar a colaboração**
 
-## ⚙️ Utilização e possibilidades
+## ⚙️ **Utilização e Possibilidades**
 
 - **Documentação e Design Docs**
 - **Implementação**
@@ -44,7 +44,7 @@ Na engenharia de prompt, você escolhe os formatos, frases, palavras e símbolos
 
 ---
 
-## 📄 Documentação e Design Docs
+## 📄 **Documentação e Design Docs**
 
 - **Requisitos e Produto** // TRD, PRD, FRD, User Stories
 - **Design e Arquitetura** // System Design (HL), Low-Level Design (LLD), C4
@@ -54,7 +54,7 @@ Na engenharia de prompt, você escolhe os formatos, frases, palavras e símbolos
 
 ---
 
-## 💻 Implementação
+## 💻 **Implementação**
 
 - **Exploração**
 - **Contextualização**
@@ -68,7 +68,7 @@ Na engenharia de prompt, você escolhe os formatos, frases, palavras e símbolos
 
 ---
 
-## 🔍 Code Review
+## 🔍 **Code Review**
 
 - **Análise de Discrepâncias** // Implementação reflete a documentação
 - **Verificações de implementação de features**
@@ -79,11 +79,11 @@ Na engenharia de prompt, você escolhe os formatos, frases, palavras e símbolos
 
 ---
 
-## 🎨 Tipos de Prompts e Variações
+## 🎨 **Tipos de Prompts e Variações**
 
 Existem diversas categorias e técnicas de prompts que podem ser utilizadas por desenvolvedores para otimizar suas interações com IAs. Cada tipo oferece vantagens específicas dependendo do contexto e caso de uso, desde tarefas simples sem exemplos prévios até raciocínios complexos e estruturados que melhoram significativamente a qualidade e precisão das respostas.
 
-### 📋 Exemplos
+### 📋 **Técnicas Disponíveis**
 
 - **Zero-Shot**
 - **One-Shot / Few-Shot**
@@ -92,38 +92,38 @@ Existem diversas categorias e técnicas de prompts que podem ser utilizadas por 
 - **Tree of Thought (ToT)**
 - **Self-Consistency**
 - **Directional Stimulus**
-- **ReActing**
+- **ReAct (Reasoning + Action)**
 
 ---
 
-## Zero-Shot
+## 🎯 **Zero-Shot Prompting**
 
 Zero-Shot Prompting é uma técnica onde o modelo de linguagem recebe apenas a descrição da tarefa, **sem nenhum exemplo** anterior. O objetivo é avaliar a capacidade do modelo de generalizar e resolver o problema com base apenas na instrução textual.
 
-### Estudo
+### 📚 **Estudo de Base**
 
 Essa abordagem ganhou destaque com o paper **"Language Models are Few-Shot Learners"** de Brown et al. (2020), publicado pela OpenAI. Nesse estudo, os pesquisadores demonstraram que modelos como o GPT-3 conseguem realizar tarefas complexas apenas com uma boa descrição da tarefa no prompt, mesmo sem exemplos anteriores.
 
-### Quando utilizar
+### ⏰ **Quando Utilizar**
 
 - A tarefa é simples e bem conhecida pelo modelo (por exemplo, perguntas factuais).
 - Não há tempo ou espaço para adicionar exemplos.
 - Deseja-se testar a capacidade base do modelo de interpretar a tarefa.
 - É preciso processar uma grande quantidade de tarefas distintas e breves com o menor custo de tokens.
 
-#### Link do paper: https://arxiv.org/abs/2005.14165
+#### 🔗 **Link do Paper:** https://arxiv.org/abs/2005.14165
 
 ---
 
-## Zero-Shot
+## 🎯 **Zero-Shot Prompting**
 
-### Vantagens
+### ✅ **Vantagens**
 
 - Baixo custo de preparação do prompt.
 - Alta escalabilidade.
 - Rápido para experimentação
 
-### Limitações
+### ⚠️ **Limitações**
 
 - Pode falhar em tarefas mais complexas ou menos frequentes para o modelo.
 - Não oferece controle sobre o formato da resposta.
@@ -132,35 +132,35 @@ Essa abordagem ganhou destaque com o paper **"Language Models are Few-Shot Learn
 - Variação com pequenas mudanças na formatação: prompts semanticamente equivalentes podem gerar resultados diferentes.
 - Dificuldade em tarefas de raciocínio lógico, análises comparativas ou inferência fora do contexto factual.
 
-### Estratégias de Mitigação
+### 🛠️ **Estratégias de Mitigação**
 
 Mesmo mantendo a proposta de não fornecer exemplos, algumas práticas ajudam a melhorar os resultados com Zero-Shot Prompting:
 
-#### Especificidade:
+#### 🎯 **Especificidade:**
 Instruções claras, que detalham o que se espera, aumentam a precisão.
 - **Exemplo ruim:** "Analise esse código"
 - **Melhorado:** "Explique o que esse código Go faz e liste possíveis problemas de performance."
 
-#### Linguagem declarativa e orientada à Tarefa:
+#### 💬 **Linguagem Declarativa e Orientada à Tarefa:**
 Preferência por comandos diretos a perguntas abertas.
 - **Exemplo:** "Liste os principais motivos para erros de memória em da linguagem Go."
 
-#### Sinalização do formato esperado:
+#### 📋 **Sinalização do Formato Esperado:**
 Solicitação explícita de listas, tópicos, parágrafos curtos etc.
 - **Exemplo:** "Responda em forma de tópicos." ou "Escreva uma explicação de 3 parágrafos."
 
 ---
 
-## Zero-Shot
+## 🎯 **Zero-Shot Prompting**
 
-### In-Context Instruction Learning
+### 🧠 **In-Context Instruction Learning**
 
 Mesmo sem exemplos, prompts estruturados com clareza (persona, formato, objetivo) ajudam o modelo a responder melhor. Instruções mais detalhadas melhoram a performance zero-shot.
 
 - **Antes:** "Explique o que é uma goroutine"
 - **Depois:** "Você é um especialista em Go. Escreva dois parágrafos explicando o que é uma goroutine, como ela é usada e quais são suas limitações. Seja claro, técnico e direto."
 
-### Boas práticas da Microsoft
+### 🏢 **Boas Práticas da Microsoft**
 
 - Especificar o papel do modelo ("Você é um especialista em...")
 - Especificar a saída desejada ("Responda em tópicos" ou "Formato JSON")
@@ -168,22 +168,22 @@ Mesmo sem exemplos, prompts estruturados com clareza (persona, formato, objetivo
 
 **Exemplo:** "Você é um consultor técnico. Seu trabalho é analisar este trecho de código e sugerir melhorias de performance. Responda em tópicos e justifique cada sugestão."
 
-#### Importante:
+#### ⚠️ **Importante:**
 Apesar desse exemplo fornecer instruções estruturadas, **não apresenta nenhum exemplo anterior**. O modelo precisa inferir a tarefa com base apenas na instrução natural.
 
-https://microsoft.github.io/prompt-engineering/
+🔗 **Referência:** https://microsoft.github.io/prompt-engineering/
 
 ---
 
-## One-Shot / Few-Shot
+## 📝 **One-Shot / Few-Shot Prompting**
 
 Few-Shot Prompting é uma técnica onde fornecemos **um pequeno número de exemplos (normalmente entre 1 e 5)** para que o modelo entenda o padrão de entrada e saída antes de gerar uma nova resposta. O modelo "aprende" apenas com base nesses exemplos, dentro do próprio prompt, sem qualquer re-treinamento.
 
-### Estudo
+### 📚 **Estudo de Base**
 
 A técnica foi formalizada no artigo seminal **"Language Models are Few-Shot Learners"** de Brown et al. (2020), que apresentou o GPT-3 e sua capacidade de realizar tarefas complexas com apenas alguns exemplos embutidos na entrada textual.
 
-### Quando utilizar
+### ⏰ **Quando Utilizar**
 
 - A tarefa tem **múltiplas formas de execução válidas**, e você deseja orientar o estilo da resposta.
 - O modelo **comete erros ou se comporta de forma inconsistente** em Zero-Shot.
@@ -192,21 +192,21 @@ A técnica foi formalizada no artigo seminal **"Language Models are Few-Shot Lea
 
 ---
 
-## One-Shot / Few-Shot
+## 📝 **One-Shot / Few-Shot Prompting**
 
-### Vantagens
+### ✅ **Vantagens**
 
 - **Precisão aumentada:** exemplos ajudam o modelo a compreender nuances da tarefa.
 - **Consistência de estilo:** útil para gerar código/documentação com padronização.
 - **Pouco custo de engenharia:** mais simples do que treinar modelos.
 
-### Limitações
+### ⚠️ **Limitações**
 
 - **Custo em tokens:** exemplos ocupam espaço no prompt, reduzindo espaço para contexto.
 - **Dependência da qualidade dos exemplos:** exemplos ambíguos ou mal formulados comprometem a resposta.
 - **Fragilidade à ordem:** mudar a ordem dos exemplos pode afetar o desempenho.
 
-### Estrutura e exemplos
+### 📋 **Estrutura e Exemplos**
 
 ```
 Exemplo 1:
@@ -238,7 +238,7 @@ Teste:
 **Resultado esperado:**
 O modelo gera o teste para Multiplica seguindo o estilo e estrutura do exemplo anterior, com nomes de funções, variáveis e mensagens consistentes.
 
-### Comparativo
+### 📊 **Comparativo**
 
 | Tipo de Prompt | Exemplos | Precisão | Controle de Saída | Custo |
 |----------------|----------|----------|-------------------|--------|
@@ -248,38 +248,38 @@ O modelo gera o teste para Multiplica seguindo o estilo e estrutura do exemplo a
 
 ---
 
-## Chain of Thought (CoT)
+## 🧠 **Chain of Thought (CoT)**
 
 Chain of Thought (CoT) é uma técnica de engenharia de prompt que instrui o modelo a externalizar seu raciocínio **passo a passo**, permitindo que ele resolva tarefas que exigem lógica, múltiplas etapas ou operações intermediárias. Em vez de apenas dar a resposta final, o modelo mostra seu processo de pensamento.
 
-### Estudo
+### 📚 **Estudo de Base**
 
 A técnica foi formalizada no paper **"Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"** de Wei et al. (2022), demonstrando que grandes modelos como PaLM e GPT-3 apresentam desempenho significativamente superior em tarefas de raciocínio lógico e aritmético quando induzidos a pensar de forma encadeada.
 
-### Advanced Reasoning
+### 🚀 **Advanced Reasoning**
 
 - O CoT é a **fundação para os recursos de Advanced Reasoning em LLMs**, como GPT-4, Claude e Gemini. Esses modelos foram treinados com instruções e exemplos que incentivam raciocínio multietapas, explicações lógicas e reflexões auditáveis.
 - Chain of Thought permite que o modelo não apenas **chegue à resposta**, mas também **demonstre como chegou até ela**, oferecendo transparência, confiabilidade e contexto técnico.
 
-### Quando utilizar
+### ⏰ **Quando Utilizar**
 
 - Diagnóstico de falhas e bugs
 - Planejamento lógico de processos
 - Argumentações comparativas entre abordagens
 
-#### Link do paper: https://arxiv.org/abs/2201.11903
+#### 🔗 **Link do Paper:** https://arxiv.org/abs/2201.11903
 
 ---
 
-## Chain of Thought (CoT)
+## 🧠 **Chain of Thought (CoT)**
 
-### Vantagens
+### ✅ **Vantagens**
 
 - **Raciocínio explícito:** permite que o modelo demonstre seu processo de pensamento passo a passo.
 - **Maior resolução de problemas complexos:** melhora significativamente o desempenho em tarefas que exigem múltiplas etapas de raciocínio.
 - **Transparência e auditabilidade:** torna o processo decisório do modelo visível, facilitando a verificação da lógica utilizada.
 
-### Limitações
+### ⚠️ **Limitações**
 
 - Gera saídas mais longas, o que pode ser custoso em prompts com limite de tokens.
 - Pode introduzir ruído se o modelo gerar cadeias de pensamento incorretas.
@@ -289,7 +289,7 @@ A técnica foi formalizada no paper **"Chain-of-Thought Prompting Elicits Reason
   - "Pare quando tiver certeza da resposta."
   - "Após concluir as etapas, retorne apenas a resposta final."
 
-### Estrutura e exemplos
+### 📋 **Estrutura e Exemplos**
 
 ```
 Você é um engenheiro de software com 20 anos de experiência em sistemas concorrentes e distribuídos. Seu trabalho é revisar o código a seguir e identificar falhas ou melhorias. Pense passo a passo, justificando cada ponto com base nas práticas recomendadas em Go. Ao final, revise a sequência de etapas e forneça uma conclusão objetiva.
@@ -304,7 +304,7 @@ Resultado final: <conclusão>
 
 ## Chain of Thought (CoT)
 
-#### 1. Debugging com raciocínio lógico
+#### 🐛 **1. Debugging com Raciocínio Lógico**
 
 **Prompt:**
 
@@ -329,7 +329,7 @@ Resultado final: o programa entra em pânico (panic) por acesso fora dos limites
 
 ## Chain of Thought (CoT)
 
-#### 2. Refatoração com justificativas técnicas
+#### 🔧 **2. Refatoração com Justificativas Técnicas**
 
 **Prompt:**
 
@@ -355,7 +355,7 @@ func Validar(u Usuario) error {
 
 ## Chain of Thought (CoT)
 
-#### 3. Planejamento básico
+#### 📋 **3. Planejamento Básico**
 
 **Prompt:**
 
@@ -383,7 +383,7 @@ Resultado final: Arquitetura distribuída validada com ganhos de resiliência e 
 
 ## Chain of Thought (CoT)
 
-### Estratégias inspiradas na Anthropic Prompt Library
+### 🎯 **Estratégias Inspiradas na Anthropic Prompt Library**
 
 - **Persona + Objetivo + Estrutura clara:** contextualiza a função do modelo e define o tom da resposta.
 - **Chamado à reflexão lógica:** "Pense passo a passo", "Justifique cada etapa".
@@ -391,11 +391,11 @@ Resultado final: Arquitetura distribuída validada com ganhos de resiliência e 
 - **Autoavaliação embutida:** "Verifique se todos os passos estão consistentes".
 - **Critério de parada lógico:** encerrar ao atingir o raciocínio final.
 
-### Técnicas avançadas de CoT com delimitações estruturais (Anthropic-style)
+### 🔧 **Técnicas Avançadas de CoT com Delimitações Estruturais (Anthropic-style)**
 
 Modelos como Claude e GPT respondem melhor quando o prompt apresenta **delimitações estruturais explícitas**. Uma técnica bastante utilizada pela Anthropic, segundo sua própria Claude Prompt Library, é o uso de **delimitadores XML-like** como `<thought>`, `<reasoning>`, `<answer>`, etc., para **separar raciocínio da resposta final**, melhorar a legibilidade, e tornar o prompt mais auditável.
 
-### Variações comuns de marcadores
+### 🏷️ **Variações Comuns de Marcadores**
 
 - `<context>` — delimita contexto inicial ou sistema.
 - `<thought>` ou `<reasoning>` — contém o raciocínio lógico.
@@ -403,7 +403,7 @@ Modelos como Claude e GPT respondem melhor quando o prompt apresenta **delimita�
 - `<answer>` — resposta direta, sem explicações.
 - `<final_decision>` — quando há múltiplas alternativas sendo avaliadas.
 
-### Motivação para usar marcadores estruturais
+### 💡 **Motivação para Usar Marcadores Estruturais**
 
 - Reduz ambiguidade entre raciocínio e resposta.
 - Permite que o modelo organize suas ideias de maneira hierárquica.
@@ -414,7 +414,7 @@ Modelos como Claude e GPT respondem melhor quando o prompt apresenta **delimita�
 
 ## Chain of Thought (CoT)
 
-### Exemplo
+### 💻 **Exemplo Prático**
 
 **Prompt:**
 
@@ -455,7 +455,7 @@ O backend da aplicação Todo List deve ser construído em Go, com suporte a JWT
 
 ## Chain of Thought (CoT)
 
-### Comparativo
+### 📊 **Comparativo**
 
 | Tipo de Prompt | Requer Exemplos | Gera Raciocínio | Ideal para |
 |----------------|-----------------|-----------------|------------|
@@ -465,26 +465,26 @@ O backend da aplicação Todo List deve ser construído em Go, com suporte a JWT
 
 ---
 
-## Skeleton of Thought (SoT)
+## 🦴 **Skeleton of Thought (SoT)**
 
 Skeleton of Thought Prompting é uma variação de Chain of Thought onde o modelo é instruído a seguir uma **estrutura lógica pré-definida (um esqueleto)**, com marcadores claros de seções ou ideias centrais que devem ser preenchidas com raciocínio. Essa técnica é ideal quando o desenvolvedor deseja que a IA produza respostas **organizadas**, **completas** e **sem fugir da estrutura** desejada.
 
-### Estudo
+### 📚 **Estudo de Base**
 
 A técnica foi inspirada diretamente em um estudo acadêmico publicado por Zhang et al. (2023) no paper **"Skeleton-of-Thought: Large Language Models Can Do Parallel Decoding"**. Nesse trabalho, os autores mostraram que é possível separar a geração do **esqueleto estrutural da resposta** da geração do **conteúdo detalhado de cada parte**, promovendo paralelismo e coerência. Embora o foco técnico do paper seja a melhoria de desempenho por decodificação paralela, o mesmo princípio é aplicável a prompting estrutural em diversos contextos como documentações, arquitetura de software, etc.
 
-### Quando utilizar
+### ⏰ **Quando Utilizar**
 
 - Resumos técnicos com seções fixas
 - Documentações, ADRs, Templates
 - Quando há necessidade de controlar a saída e formato de uma resposta
 
-#### Link do paper: https://arxiv.org/abs/2307.15337
+#### 🔗 **Link do Paper:** https://arxiv.org/abs/2307.15337
 ---
 
-## Skeleton of Thought (SoT)
+## 🦴 **Skeleton of Thought (SoT)**
 
-### Exemplo
+### 💻 **Exemplo Prático**
 
 **Prompt:**
 
@@ -530,7 +530,7 @@ Você é um engenheiro de software especializado em performance e escalabilidade
 
 ## Skeleton of Thought (SoT)
 
-### Quando usar SoT vs CoT "puro"
+### 🤔 **Quando Usar SoT vs CoT "Puro"**
 
 | Quando... | Use Skeleton of Thought |
 |-----------|------------------------|
@@ -540,7 +540,7 @@ Você é um engenheiro de software especializado em performance e escalabilidade
 | A IA costuma se perder na estrutura | Sim |
 | A lógica for altamente exploratória | Não |
 
-### Comparativo
+### 📊 **Comparativo**
 
 | Técnica | Requer estrutura? | Raciocina passo a passo? | Ideal para... |
 |---------|------------------|-------------------------|---------------|
@@ -551,28 +551,28 @@ Você é um engenheiro de software especializado em performance e escalabilidade
 
 ---
 
-## Tree of Thought (ToT)
+## 🌳 **Tree of Thought (ToT)**
 
 Tree of Thought (ToT) é uma extensão da técnica Chain of Thought (CoT) que permite que o modelo explore **múltiplos caminhos de raciocínio paralelos ou alternativos** antes de tomar uma decisão final. Em vez de um raciocínio linear, o ToT incentiva o modelo a **ramificar ideias** e **avaliar alternativas**, como se estivesse construindo uma árvore de decisões.
 
-### Estudo
+### 📚 **Estudo de Base**
 
 A técnica foi formalizada por Yao et al., 2023, no paper **Tree of Thoughts: Deliberate Problem Solving with Large Language Models**, mostrando ganhos significativos em tarefas complexas como jogos de lógica, planejamento e raciocínio analítico estruturado.
 
-### Quando utilizar
+### ⏰ **Quando Utilizar**
 
 - A tarefa é ambígua ou tem **múltiplas soluções possíveis**.
 - É necessário **comparar estratégias ou caminhos distintos**.
 - A decisão final depende de **múltiplos critérios ou trade-offs**.
 - Deseja-se simular **raciocínio humano deliberado** com ponderações.
 
-#### Link do paper: https://arxiv.org/abs/2305.10601
+#### 🔗 **Link do Paper:** https://arxiv.org/abs/2305.10601
 
 ---
 
-## Tree of Thought (ToT)
+## 🌳 **Tree of Thought (ToT)**
 
-### Exemplo
+### 💻 **Exemplo Prático**
 
 **Prompt:**
 
@@ -612,7 +612,7 @@ Token Bucket com Redis + buffer local representa o melhor equilíbrio entre simp
 
 ## Tree of Thought (ToT)
 
-### Técnicas auxiliares
+### 🛠️ **Técnicas Auxiliares**
 
 **Expansão controlada de caminhos:** limite a profundidade e número de alternativas para evitar dispersão.
 
@@ -636,7 +636,7 @@ Token Bucket com Redis + buffer local representa o melhor equilíbrio entre simp
 
 ## Tree of Thought (ToT)
 
-### Combinação com outras técnicas: ToT + CoT + SoT
+### 🔗 **Combinação com Outras Técnicas: ToT + CoT + SoT**
 
 Tree of Thought é altamente compatível com outras estratégias de prompting, resultando em maior controle, completude e explicabilidade. Abaixo está um exemplo que combina Tree of Thought com Chain of Thought e Skeleton of Thought.
 
@@ -683,7 +683,7 @@ Ao final, decida qual abordagem representa o melhor equilíbrio para o caso prop
 
 ## Tree of Thought (ToT)
 
-### Comparativo com outras técnicas
+### 📊 **Comparativo com Outras Técnicas**
 
 | Técnica | Requer estrutura? | Raciocina passo a passo? | Gera múltiplas alternativas? | Ideal para... |
 |---------|------------------|-------------------------|------------------------------|---------------|
@@ -695,7 +695,7 @@ Ao final, decida qual abordagem representa o melhor equilíbrio para o caso prop
 
 ---
 
-## 📊 Resumo comparativo: CoT, SoT, ToT
+## 📊 **Resumo Comparativo: CoT, SoT, ToT**
 
 | Técnica | Situação ideal | Justificativa | Exemplo de prompt |
 |---------|----------------|---------------|-------------------|
@@ -708,9 +708,9 @@ Ao final, decida qual abordagem representa o melhor equilíbrio para o caso prop
 
 ---
 
-## 📈 Resumo comparativo: CoT, SoT, ToT
+## 📈 **Resumo Comparativo: CoT, SoT, ToT**
 
-### Casos de uso abordados
+### 🎯 **Casos de Uso Abordados**
 
 | Técnica aplicada | Situação | Justificativa |
 |-----------------|----------|---------------|
@@ -721,7 +721,7 @@ Ao final, decida qual abordagem representa o melhor equilíbrio para o caso prop
 | ToT + SoT + CoT | Definir melhor stack entre Go, Node.js e Python para microserviços | Requer estrutura, múltiplas alternativas e raciocínio interno completo |
 | ToT + SoT | Comparar bancos SQL, NoSQL e NewSQL para leitura intensiva | Múltiplas estratégias com análise técnica estruturada, sem exigir CoT |
 
-### Conclusão
+### 🎯 **Conclusão**
 
 Cada técnica possui forças complementares:
 
@@ -731,9 +731,9 @@ Cada técnica possui forças complementares:
 
 ---
 
-## Self-Consistency
+## 🔄 **Self-Consistency**
 
-### Como funciona a técnica
+### ⚙️ **Como Funciona a Técnica**
 
 1. O prompt induz o modelo a pensar passo a passo (Chain of Thought).
 2. A tarefa é executada **diversas vezes** (tipicamente de 5 a 10).
@@ -742,14 +742,14 @@ Cada técnica possui forças complementares:
 
 O princípio é simples: o modelo pode cometer erros em uma cadeia específica, mas, com múltiplas execuções, as respostas **mais confiáveis tendem a convergir**.
 
-### Quando utilizar
+### ⏰ **Quando Utilizar**
 
 - Há ambiguidade matemática ou estrutural.
 - A tarefa é suscetível a variações de raciocínio.
 - O modelo tende a dar boas respostas às vezes, mas não sempre.
 - Você precisa aumentar a confiabilidade da saída com pouco custo computacional adicional.
 
-### Por que funciona
+### 💡 **Por Que Funciona**
 
 LLMs operam com amostragem probabilística (ex: temperatura > 0), o que os torna suscetíveis a gerar variações, desvios ou respostas inconsistentes. Ao gerar múltiplas execuções:
 
@@ -757,13 +757,13 @@ LLMs operam com amostragem probabilística (ex: temperatura > 0), o que os torna
 - Aumentamos a chance de obter uma resposta estatisticamente sólida.
 - Priorizamos coerência entre caminhos lógicos distintos.
 
-#### Link do paper: https://arxiv.org/abs/2203.11171
+#### 🔗 **Link do Paper:** https://arxiv.org/abs/2203.11171
 
 ---
 
-## Self-Consistency
+## 🔄 **Self-Consistency**
 
-### Situação
+### 💰 **Situação Prática**
 
 Você está desenvolvendo a estimativa de custo mensal para uma aplicação em produção na AWS. A aplicação utiliza:
 
@@ -813,7 +813,7 @@ A estimativa de **$736.76** foi repetida em duas execuções com cálculos detal
 
 ## Self-Consistency
 
-### Aplicações práticas em engenharia de software
+### 💻 **Aplicações Práticas em Engenharia de Software**
 
 - Estimativas de custo e capacidade (cloud, infra, storage)
 - Planejamento de sizing de ambientes
@@ -821,13 +821,13 @@ A estimativa de **$736.76** foi repetida em duas execuções com cálculos detal
 - Verificação de hipóteses técnicas sob múltiplos critérios
 - Comparações de lógica interna em testes de arquitetura
 
-### Dicas de aplicação
+### 💡 **Dicas de Aplicação**
 
 - Gere 5 a 10 respostas com **temperatura > 0.5** para estimular caminhos diversos.
 - Normalize o formato da saída antes de comparar.
 - Pode ser usada manualmente (humano escolhe) ou automaticamente (via votação).
 
-### Exemplo completo usando todas as dicas de aplicação
+### 🎯 **Exemplo Completo Usando Todas as Dicas de Aplicação**
 
 Você quer estimar o número ideal de shards para uma base de dados multitenant com 80.000 clientes.
 
@@ -849,31 +849,31 @@ Você quer estimar o número ideal de shards para uma base de dados multitenant 
 
 ---
 
-## 🎯 Directional Stimulus / Directed Prompting
+## 🎯 **Directional Stimulus / Directed Prompting**
 
 Directed Prompting (ou Directional Stimulus Prompting) é uma técnica que guia a resposta do modelo ao utilizar verbetes, comandos ou estímulos direcionais. Diferente de prompts abertos ou vagos, essa abordagem indica como o modelo deve pensar ou responder, influenciando estilo, formato, foco ou tipo de raciocínio esperado.
 
-### Quando utilizar
+### ⏰ **Quando Utilizar**
 
 - Quando é necessário obter **respostas previsíveis ou formatadas**.
 - Quando deseja-se guiar o raciocínio por um **estilo de resposta desejado**.
 - Quando a resposta precisa estar em um **formato parseável** (como JSON, XML, YAML).
 - Quando a tarefa exige foco explícito (ex: "responda como um arquiteto", "explique em tópicos").
 
-### Benefícios de Directed Prompting
+### ✅ **Benefícios de Directed Prompting**
 
 - Reduz ambiguidade e alucinação.
 - Padroniza a forma da resposta.
 - Melhora a utilidade programática da saída (ex: para scripts ou interfaces).
 - Permite controle educado do comportamento do modelo, sem necessidade de complexidade adicional.
 
-#### Link do paper: https://arxiv.org/abs/2210.11416
+#### 🔗 **Link do Paper:** https://arxiv.org/abs/2210.11416
 
 ---
 
-## Directional Stimulus
+## 🎯 **Directional Stimulus**
 
-### Exemplos de comandos direcionais comuns
+### 📋 **Exemplos de Comandos Direcionais Comuns**
 
 - "Liste..."
 - "Compare..."
@@ -885,7 +885,7 @@ Directed Prompting (ou Directional Stimulus Prompting) é uma técnica que guia 
 
 Esses comandos **atuam como estímulos condicionais**, que alteram tanto **o formato quanto a profundidade** da resposta.
 
-### Aplicações em engenharia de software
+### 💻 **Aplicações em Engenharia de Software**
 
 - Gerar documentação técnica com estrutura específica
 - Listar vantagens/desvantagens de soluções de arquitetura
@@ -896,7 +896,7 @@ Esses comandos **atuam como estímulos condicionais**, que alteram tanto **o for
 
 ## Directional Stimulus
 
-### Exemplo: Comparação de tecnologias com Directed Prompting / Direction Stimulus
+### 💻 **Exemplo: Comparação de Tecnologias com Directed Prompting**
 
 **Prompt:**
 
@@ -929,7 +929,7 @@ Compare as tecnologias Kafka, RabbitMQ e Amazon SQS para uso em sistemas distrib
 
 ---
 
-## Directional Stimulus vs SoT
+### 📊 **Directional Stimulus vs SoT**
 
 | Aspecto | Skeleton of Thought | Directed Prompting |
 |---------|--------------------|--------------------|
@@ -941,21 +941,21 @@ Compare as tecnologias Kafka, RabbitMQ e Amazon SQS para uso em sistemas distrib
 
 ---
 
-## 🔄 ReAct (Reasoning + Action)
+## 🔄 **ReAct (Reasoning + Action)**
 
 ReAct (Reasoning + Acting) é uma técnica de prompting que permite que LLMs combinem **raciocínio passo a passo (Chain of Thought)** com a **execução de ações externas** — como chamadas a ferramentas, busca em bancos de dados, execução de código ou uso de APIs.
 
-### Estudo
+### 📚 **Estudo de Base**
 
 Foi formalizada no paper **"ReAct: Synergizing Reasoning and Acting in Language Models"** por Yao et al., 2022. A ideia é fazer com que o modelo pense de forma deliberada e execute ações iterativas com base nesse raciocínio.
 
-### Quando utilizar
+### ⏰ **Quando Utilizar**
 
 - Quando o modelo precisa consultar APIs, sistemas ou bancos de dados.
 - Quando o raciocínio sozinho **não é suficiente** para responder.
 - Quando há dependência de **informações externas dinâmicas**.
 
-### Vantagens e Limitações do ReAct Prompting
+### ✅ **Vantagens e ⚠️ Limitações do ReAct Prompting**
 
 **Vantagens:**
 - Permite que o modelo **combine raciocínio com ação** em tempo real.
@@ -970,13 +970,13 @@ Foi formalizada no paper **"ReAct: Synergizing Reasoning and Acting in Language 
 - A estrutura Thought/Action/Observation deve ser seguida à risca, o que pode limitar a fluidez da linguagem.
 - Aumenta a complexidade de construção e teste do prompt.
 
-#### Link do paper: https://arxiv.org/abs/2210.03629
+#### 🔗 **Link do Paper:** https://arxiv.org/abs/2210.03629
 
 ---
 
-## ReAct
+## 🔄 **ReAct**
 
-### Exemplo técnico: Inspeção de containers com ReAct e ferramenta Docker
+### 🐳 **Exemplo Técnico: Inspeção de Containers com ReAct e Ferramenta Docker**
 
 **Prompt**
 
@@ -1035,7 +1035,7 @@ Observation: Rollback initiated. Traffic stabilizing.
 Final Answer: O erro 503 foi causado por uma falha no último deploy às 14:00. Rollback aplicado com sucesso.
 ```
 
-### Aplicações práticas em engenharia de software
+### 💻 **Aplicações Práticas em Engenharia de Software**
 
 - **Depuração com logs ou trace APIs**
 
@@ -1043,7 +1043,7 @@ Final Answer: O erro 503 foi causado por uma falha no último deploy às 14:00. 
 
 ## ReAct
 
-### Diferença entre ReAct e CoT puro
+### 📊 **Diferença entre ReAct e CoT Puro**
 
 | ReAct | Chain of Thought (CoT) |
 |-------|------------------------|
